@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@font-face {
+    font-family: 'Bebas Neue Pro';
+    src: url('./../fonts/BebasNeuePro-Bold.eot');
+    src: local('./../fonts/Bebas Neue Pro Bold'), local('./../fonts/BebasNeuePro-Bold'),
+        url('./../fonts/BebasNeuePro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/BebasNeuePro-Bold.woff2') format('woff2'),
+        url('./../fonts/BebasNeuePro-Bold.woff') format('woff'),
+        url('./../fonts/BebasNeuePro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue Pro';
+    src: url('./../fonts/BebasNeuePro-SemiExpXBold.eot');
+    src: local('./../fonts/Bebas Neue Pro SemiExpanded ExtraBold'), local('./../fonts/BebasNeuePro-SemiExpXBold'),
+        url('./../fonts/BebasNeuePro-SemiExpXBold.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/BebasNeuePro-SemiExpXBold.woff2') format('woff2'),
+        url('./../fonts/BebasNeuePro-SemiExpXBold.woff') format('woff'),
+        url('./../fonts/BebasNeuePro-SemiExpXBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+$color-primary: #242424;
+$color-secondary: #FF4900;
+$color-third: #FFB822;
+$color-neutral: #3C3C3C;
+$color-text: #f0f0f0;
+$color-text--dark: #d5cdc6;
+$color-primary--light: rgb(58, 58, 58);
+
+$font-primary: "Bebas Neue Pro";
+$font-secondary: "Montserrat";
+
+$radius-primary: 7px;

@@ -1,0 +1,140 @@
+.wrapper{
+    &__content{
+        display: flex;
+        min-height: calc(100vh - 60px);
+    }
+}
+.route-line{
+    flex: 0 0 auto;
+    height: calc(100vh - 60px);
+    position: sticky;
+    top:0;
+}
+.main{
+    flex: 1 1 100%;
+}
+.section-main{
+    padding-left: 100px;
+    width: 100%;
+    position: relative;
+    &__wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+}
+.back-div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    &__wrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    &__text{
+        position: absolute;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #202020;
+        &_1{
+            top: -10px;
+            left: 50px;
+            font-size: 250px;
+        }
+        &_2{
+            top: 400px;
+            left: 50px;
+            font-size: 250px;
+        }
+        &_f{
+            display: inline-block;
+        }
+    }
+}
+.brief-information{
+    flex: 1 1 auto;
+    height: auto;
+    &__block{
+        // margin-top: 100px;
+    }
+    &__greeting{
+        font-size: 40px;
+    }
+    &__introduction{
+        font-size: 170px;
+        text-transform: uppercase;
+        &_vertical{
+            writing-mode: vertical-rl;
+            font-size: 34px;
+            color: $color-secondary;
+            margin-bottom: -2px;
+        }
+    }
+    &__definition{
+        margin-top: -20px;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+    &__buttons{
+        margin-top: 20px;
+    }
+}
+.portrait{
+    flex: 0 0 600px;
+    height: 100%;
+    position: relative;
+    &__tooltip{
+        position: absolute;
+        right: 0px;
+        top: 100px;
+        z-index: 0;
+    }
+    &__tooltip-wrapper{
+    }
+    &__tooltip-text{
+        margin-top: -10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        opacity: 0;
+        &_my{
+            transform: translate(16px, 0);
+        }
+        &_name{
+            transform: translate(0, 8px);
+            color: $color-secondary;
+        }
+    }
+    &__tooltip-line-point{
+        position: relative;
+        margin-left: -10px;
+    }
+    &__tooltip-line{
+        margin-top: -15px;
+        // opacity: 0;
+    }
+    &__point{
+        width: 5px;
+        height: 5px;
+        background-color: $color-secondary;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    .webgl{
+        position: relative;
+        z-index: 1;
+    }
+}
+.section-about{
+    height: 1000px;
+}

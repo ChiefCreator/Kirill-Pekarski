@@ -1,0 +1,81 @@
+.button{
+    border: 2px solid rgb(140, 140, 140);
+    border-radius: 30px;
+    color: $color-text;
+    padding: 5px 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &__name{
+        font-size: 30px;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+    &__marquee{
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    &__marquee-wrapper{
+        display: flex;
+        align-items: center;
+        width: 200%;
+        height: 100%;
+    }
+    &__marquee-name{
+        display: block;
+        width: 100%;
+        text-wrap: nowrap;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    &__pulse-element{
+        z-index: 1;
+        position: absolute;
+        background-color: $color-primary;
+        animation: pulse .5s ease-in-out;
+        border-radius: 50%;
+    }
+    @keyframes pulse {
+        to{
+            transform: scale(0);
+            background-color: $color-secondary;
+        }
+    }
+    &:hover{
+        .button__name{
+            opacity: 0;
+        }
+        .button__marquee-name{
+            &_first{
+                animation: marquee1 3s linear infinite;
+                animation-delay: -3s;
+            }
+            &_second{
+                animation: marquee2 3s linear infinite;
+                animation-delay: -1.5s;
+            }
+        }
+    }
+    @keyframes marquee1 {
+        0% {
+            transform: translateX(100%);
+        }
+        
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    @keyframes marquee2 {
+        0% {
+            transform: translateX(0%);
+        }
+        
+        100% {
+            transform: translateX(-200%);
+        }
+    }
+}

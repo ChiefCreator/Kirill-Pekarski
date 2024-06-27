@@ -1,0 +1,42 @@
+.route-line{
+    padding: 50px 0;
+    &__wrapper{
+        height: 100%;
+        position: relative;
+    }
+    &__wrapper-lines{
+        width: 2px;
+        height: 100%;
+        position: relative;
+    }
+    &__line{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        border-radius: 50px;
+        &_progress{
+            z-index: 2;
+            background-color: $color-secondary;
+            height: 0;
+            transition: all 1s cubic-bezier(.49,1.9,.3,.62);
+        }
+        &_bg{
+            z-index: 1;
+            background-color: #3C3C3C;
+            height: 100%;
+        }
+    }
+    &__circle{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 10px;
+        height: 10px;
+        background-color: $color-secondary;
+        border-radius: 50%;
+        transition: all 1s cubic-bezier(.49,1.9,.3,.62);
+    }
+}

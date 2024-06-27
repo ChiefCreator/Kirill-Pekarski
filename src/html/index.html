@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Kirill Pekarski</title>
+</head>
+<body>
+    @@include("./blocks/header.html")
+    <div class="wrapper">
+        <div class="container">
+            <div class="wrapper__content">
+                @@include("./blocks/route-line.html")
+                <main class="main">
+                    <section class="section-main">
+                        <div class="section-main__wrapper">
+                            <div class="brief-information">
+                                <div class="brief-information__block">
+                                    <h2 class="brief-information__introduction">Кирилл<span class="brief-information__introduction_vertical">Пекарский</span></h2>
+                                    <p class="brief-information__definition">Креативный <span class="brief-information__definition_select">frontend-разработчик, web-программист</span></p>
+                                    <div class="brief-information__buttons">
+                                        @@include("./blocks/button.html")
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portrait">
+                                <div class="portrait__tooltip">
+                                    <div class="portrait__tooltip-wrapper">
+                                        <p class="portrait__tooltip-text portrait__tooltip-text_my">Это кстати моя скульптура</p>
+                                        <p class="portrait__tooltip-text portrait__tooltip-text_name">Kirill Pekarski</p>
+                                        <div class="portrait__tooltip-line-point">
+                                            <span class="portrait__point"></span>
+                                            <svg class="portrait__tooltip-line" width="110" height="21" stroke="#FF4900" fill="none">
+                                                <path d="M 0 20 H 80 L 110 5" stroke-dasharray="150", stroke-dashoffset="150"/>          
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas class="webgl"></canvas>
+                            </div>
+                        </div>
+                        <div class="back-div">
+                            <div class="back-div__wrapper">
+                                <p class="back-div__text back-div__text_1"><span class="back-div__text_f">F</span><span class="back-div__text_f">r</span><span class="back-div__text_f">o</span><span class="back-div__text_f">n</span><span class="back-div__text_f">t</span><span class="back-div__text_f">e</span><span class="back-div__text_f">n</span><span class="back-div__text_f">d</span></p>
+                                <p class="back-div__text back-div__text_2"><span class="back-div__text_f">D</span><span class="back-div__text_f">e</span><span class="back-div__text_f">v</span><span class="back-div__text_f">e</span><span class="back-div__text_f">l</span><span class="back-div__text_f">o</span><span class="back-div__text_f">p</span><span class="back-div__text_f">e</span><span class="back-div__text_f">r</span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section-about"></section>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.bundle.js"></script>
+</body>
+</html>
