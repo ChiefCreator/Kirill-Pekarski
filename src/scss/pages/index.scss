@@ -61,9 +61,6 @@
 .brief-information{
     flex: 1 1 auto;
     height: auto;
-    &__block{
-        // margin-top: 100px;
-    }
     &__greeting{
         font-size: 40px;
     }
@@ -81,9 +78,13 @@
         margin-top: -20px;
         font-size: 40px;
         text-transform: uppercase;
+        color: $color-text--dark;
     }
     &__buttons{
         margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
 }
 .portrait{
@@ -136,5 +137,58 @@
     }
 }
 .section-about{
-    height: 1000px;
+    padding: 100px 100px 100px 100px;
+    width: 100%;
+    position: relative;
+    &__wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 100px;
+    }
+    &__date{
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+    }
+}
+.full-information{
+    flex: 1 1 auto;
+    &__text{
+        text-align: justify;
+        text-transform: uppercase;
+        font-size: 30px;
+        transform: translate(0, 0);
+    }
+    &__text:not(:first-child){
+        margin-top: 10px;
+    }
+}
+.date{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &__nums{
+        font-size: 150px;
+        font-family: $font-nums;
+        display: flex;
+    }
+    &__num{
+        display: inline-block;
+        min-width: 110px;
+    }
+    &__info{
+    }
+    &__month{
+        font-size: 30px;
+        text-transform: uppercase;
+        display: block;
+        opacity: 1;
+    }
+    &__text{
+        color: $color-text--darken;
+        text-transform: uppercase;
+        display: block;
+        opacity: 1;
+    }
 }

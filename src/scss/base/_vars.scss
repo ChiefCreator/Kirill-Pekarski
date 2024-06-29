@@ -23,16 +23,42 @@
     font-weight: 800;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Maelstrom';
+    src: url('./../fonts/Maelstrom-Bold.eot');
+    src: url('./../fonts/Maelstrom-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Maelstrom-Bold.woff2') format('woff2'),
+        url('./../fonts/Maelstrom-Bold.woff') format('woff'),
+        url('./../fonts/Maelstrom-Bold.ttf') format('truetype'),
+        url('./../fonts/Maelstrom-Bold.svg#Maelstrom-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Maelstrom Sans';
+    src: url('./../fonts/MaelstromSans-Bold.eot');
+    src: url('./../fonts/MaelstromSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/MaelstromSans-Bold.woff2') format('woff2'),
+        url('./../fonts/MaelstromSans-Bold.woff') format('woff'),
+        url('./../fonts/MaelstromSans-Bold.ttf') format('truetype'),
+        url('./../fonts/MaelstromSans-Bold.svg#MaelstromSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 $color-primary: #242424;
 $color-secondary: #FF4900;
 $color-third: #FFB822;
 $color-neutral: #3C3C3C;
 $color-text: #f0f0f0;
-$color-text--dark: #d5cdc6;
+$color-text--dark: #dfdfdf;
+$color-text--darken: rgb(221, 207, 202);
 $color-primary--light: rgb(58, 58, 58);
 
 $font-primary: "Bebas Neue Pro";
 $font-secondary: "Montserrat";
+$font-nums: "Maelstrom Sans";
 
 $radius-primary: 7px;

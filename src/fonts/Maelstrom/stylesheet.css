@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Maelstrom';
+    src: url('Maelstrom-Bold.eot');
+    src: url('Maelstrom-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Maelstrom-Bold.woff2') format('woff2'),
+        url('Maelstrom-Bold.woff') format('woff'),
+        url('Maelstrom-Bold.ttf') format('truetype'),
+        url('Maelstrom-Bold.svg#Maelstrom-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maelstrom Sans';
+    src: url('MaelstromSans-Bold.eot');
+    src: url('MaelstromSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MaelstromSans-Bold.woff2') format('woff2'),
+        url('MaelstromSans-Bold.woff') format('woff'),
+        url('MaelstromSans-Bold.ttf') format('truetype'),
+        url('MaelstromSans-Bold.svg#MaelstromSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -9,10 +9,10 @@ function animateOnScrollMainSection() {
             scrollTrigger: {
                 trigger: '.section-main',
                 start: 'top top',
-                end: '+=500',
+                end: '+=700',
                 scrub: 1,
             },
-            transform: `translate(0, ${getRandomNum(-100, 100)}px)`,
+            transform: `translate(0, ${getRandomNum(-200, 200)}px)`,
             color: "#242424",
         });
     })

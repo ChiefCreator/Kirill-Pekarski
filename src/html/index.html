@@ -20,7 +20,12 @@
                                     <h2 class="brief-information__introduction">Кирилл<span class="brief-information__introduction_vertical">Пекарский</span></h2>
                                     <p class="brief-information__definition">Креативный <span class="brief-information__definition_select">frontend-разработчик, web-программист</span></p>
                                     <div class="brief-information__buttons">
-                                        @@include("./blocks/button.html")
+                                        @@include("./blocks/button.html", {
+                                            name: "Сделать заказ"
+                                        })
+                                        @@include("./blocks/button.html", {
+                                            name: "Обо мне"
+                                        })
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +52,27 @@
                             </div>
                         </div>
                     </section>
-                    <section class="section-about"></section>
+                    <section class="section-about">
+                        <div class="section-about__wrapper">
+                            <div class="section-about__date">
+                                <div class="date">
+                                    <div class="date__nums">
+                                        <span class="date__num date__num_first" data-count-to="0">0</span><span class="date__num date__num_second" data-count-to="0">0</span>
+                                    </div>
+                                    <div class="date__info">
+                                        <span class="date__month">Июня</span>
+                                        <p class="date__text">Готов к работе</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="full-information">
+                                <p class="full-information__text split-text">Привет! Меня зовут Кирилл, мне 18 лет. Я frontend-разработчик, создаю сайты, приложения и онлайн-сервисы для больших и малых компаний.</p>
+                                <p class="full-information__text split-text">Я использую свою страсть и навыки, чтобы создавать качественные цифровые продукты.</p>
+                                <p class="full-information__text split-text">Я ответственно подхожу к выполнению поставленных задач, хорошо организованный человек, позитивный с хорошим чувстов юмора. <br>Фанат футбола, активного отдыха и, конечно же, программирования.</p>
+                                <p class="full-information__text split-text">Интересуюсь всем спектром фронтенда и работаю над амбициозными проектами с интересными людьми.</p>
+                            </div>
+                        </div>
+                    </section>
                 </main>
             </div>
         </div>
