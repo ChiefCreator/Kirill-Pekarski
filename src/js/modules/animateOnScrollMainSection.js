@@ -13,7 +13,7 @@ function animateOnScrollMainSection() {
                 scrub: 1,
             },
             transform: `translate(0, ${getRandomNum(-100, 100)}px)`,
-            opacity: 0,
+            color: "#242424",
         });
     })
 

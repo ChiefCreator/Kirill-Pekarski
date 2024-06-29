@@ -1,4 +1,10 @@
+import { gsap } from "gsap";
+
 function buttonAnimation() {
+    let tl = gsap.timeline({paused: true});
+    tl.add(tl.set(".button", {color: "transparent"}))
+    tl.add(tl.to(".button", {color: "#f0f0f0", duration: 0.3}))
+
     let buttons = document.querySelectorAll(".button");
     buttons.forEach(button => {
         button.addEventListener("click", function(event) {
@@ -18,6 +24,13 @@ function buttonAnimation() {
 
             newElement.style.left = clientXButton - (newElement.offsetWidth / 2) + "px";
             newElement.style.top = clientYButton - (newElement.offsetHeight / 2) + "px"
+        })
+
+        button.addEventListener("mouseenter", () => {
+            tl.restart();
+        })
+        button.addEventListener("mouseleave", () => {
+            tl.restart();
         })
     })
 }
