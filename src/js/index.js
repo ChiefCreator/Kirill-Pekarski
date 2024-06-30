@@ -6,9 +6,13 @@ import animateOnScrollMainSection from "./modules/animateOnScrollMainSection";
 import updateRouteLine from "./modules/updateRouteLine";
 import animateOnScrollSectionAbout from "./modules/animateOnScrollSectionAbout";
 import animateDate from "./modules/animateDate";
+import animateOnScrollPortfolioSection from "./modules/animateOnScrollPortfolioSection";
+import hoverCardPortfolio from "./modules/hoverCardPortfolio";
 
 animateOnScrollMainSection();
 animateOnScrollSectionAbout();
+animateOnScrollPortfolioSection();
+hoverCardPortfolio();
 animateDate();
 updateRouteLine();
 hoverPortrait();
