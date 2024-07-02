@@ -11,12 +11,14 @@ import hoverCardPortfolio from "./modules/hoverCardPortfolio";
 import animateProgress from "./modules/animateProgress";
 import game from "./modules/game";
 import initSlider from "./modules/initSlider";
+import animateCardPortfolioOnClick from "./modules/animateCardPortfolioOnClick";
 
 animateOnScrollMainSection();
 animateOnScrollSectionAbout();
 animateOnScrollPortfolioSection();
 hoverCardPortfolio();
 animateProgress();
+animateCardPortfolioOnClick();
 game();
 animateDate();
 updateRouteLine();

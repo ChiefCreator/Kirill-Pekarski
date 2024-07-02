@@ -7,6 +7,35 @@
     <title>Kirill Pekarski</title>
 </head>
 <body>
+    <div class="popup-card">
+        <img>
+    </div>
+    <div class="popup-portfolio-card">
+        <div class="popup-portfolio-card__wrapper">
+            <header class="popup-portfolio-card__header">
+                <div class="popup-portfolio-card__close">
+                    <span class="popup-portfolio-card__close-line popup-portfolio-card__close-line_1"></span>
+                    <span class="popup-portfolio-card__close-line popup-portfolio-card__close-line_2"></span>
+                </div>
+            </header>
+            <div class="popup-portfolio-card__body">
+                <div class="popup-portfolio-card__info">
+                    <h5 class="popup-portfolio-card__title">Nikita Efremov</h5>
+                    <p class="popup-portfolio-card__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id modi explicabo voluptate laudantium</p>
+                </div>
+                <div class="popup-portfolio-card__img">
+
+                </div>
+            </div>
+            <footer class="popup-portfolio-card__footer">
+                <span class="popup-portfolio-card__line"></span>
+                <div class="popup-portfolio-card__footer-wrapper">
+                    <span class="popup-portfolio-card__text">Создание дизайна, разработка интерфейса</span>
+                    <a href="#" class="popup-portfolio-card__link">Посмотреть сайт</a>
+                </div>
+            </footer>
+        </div>
+    </div>
     @@include("./blocks/header.html")
     <div class="wrapper">
         <div class="container">
@@ -76,7 +105,7 @@
                     <section class="section-portfolio">
                         <div class="section-portfolio__wrapper">
                             <div class="section-portfolio__line section-portfolio__line_1">
-                                <div class="portfolio-card portfolio-card_Your-Budget">
+                                <div class="portfolio-card portfolio-card_Your-Budget" id="your_budget">
                                     <div class="portfolio-card__wrapper">
                                         <span class="portfolio-card__logo">
                                             <p class="portfolio-card__title">Your Budget</p>
@@ -86,7 +115,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolio-card portfolio-card_Nikita-Efremov">
+                                <div class="portfolio-card portfolio-card_Nikita-Efremov" id="nikita_efremov">
                                     <div class="portfolio-card__wrapper">
                                         <span class="portfolio-card__logo">
                                             <p class="portfolio-card__title">Nikita Efremov</p>
@@ -96,7 +125,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolio-card portfolio-card_Kolyan-Kovsh">
+                                <div class="portfolio-card portfolio-card_Kolyan-Kovsh" id="kolyan_kovsh">
                                     <div class="portfolio-card__wrapper">
                                         <span class="portfolio-card__logo">
                                             <p class="portfolio-card__title">Kolyan Kovsh</p>
@@ -106,7 +135,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolio-card portfolio-card_Boxer">
+                                <div class="portfolio-card portfolio-card_Boxer" id="boxer">
                                     <div class="portfolio-card__wrapper">
                                         <span class="portfolio-card__logo">
                                             <p class="portfolio-card__title">Boxer.by</p>
@@ -116,7 +145,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolio-card portfolio-card_Panto">
+                                <div class="portfolio-card portfolio-card_Panto" id="panto">
                                     <div class="portfolio-card__wrapper">
                                         <span class="portfolio-card__logo">
                                             <p class="portfolio-card__title">Panto</p>
@@ -126,7 +155,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolio-card portfolio-card_Tennis">
+                                <div class="portfolio-card portfolio-card_Tennis" id="tennis">
                                     <div class="portfolio-card__wrapper">
                                         <span class="portfolio-card__logo">
                                             <p class="portfolio-card__title">Tennis</p>
