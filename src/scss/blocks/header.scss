@@ -1,6 +1,12 @@
 .header{
     width: 100%;
     height: 60px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    backdrop-filter: blur(5px);
+    opacity: 1;
     &__container{
         height: 100%;
     }
@@ -13,5 +19,11 @@
     }
     &__logo{
         flex: 0 0 auto;
+    }
+    &__links{
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 }

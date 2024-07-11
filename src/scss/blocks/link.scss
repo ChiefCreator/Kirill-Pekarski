@@ -1,0 +1,56 @@
+.link{
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    color: $color-text;
+    &__title{
+        opacity: 0;
+        color: $color-text;
+    }
+    &__top{
+        height: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: transform .5s ease;
+        span{
+            display: block;
+        }
+    }
+    &__bottom{
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        transition: transform .5s ease;
+        span{
+            display: block;
+            transform: translateY(-50%);
+        }
+    }
+    &__slice{
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $color-secondary;
+        border-radius: 20px;
+        position: absolute;
+        right: -2.5px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: width .5s ease;
+    }
+    &:hover &__top{
+        transform: translateY(-2px);
+    }
+    &:hover &__bottom{
+        transform: translateY(2px);
+    }
+    &:hover &__slice{
+        left: -2.5px;
+        width: calc(100% + 5px);
+    }
+}

@@ -19,20 +19,33 @@ function animateOnScrollPortfolioSection() {
 
     const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: pageWrapper,
-          start: "top top",
-          pinnedContainer: pageWrapper,
-          end: () => "+=" + distance(line1),
-          pin: pageWrapper,
-          scrub: 2,
-          invalidateOnRefresh: true
+            trigger: pageWrapper,
+            start: "top top",
+            pinnedContainer: pageWrapper,
+            end: () => "+=" + distance(line1),
+            pin: pageWrapper,
+            scrub: 2,
+            invalidateOnRefresh: true
         }
-      });
-
-      console.log(distance(line1))
+    });
 
     tl.to(line1, {x: () => -distance(line1), ease: "none"}, 0)
     tl.to(line2, {x: 0, ease: "none"}, 0); 
+
+    // header
+
+    let header = document.querySelector(".header");
+    let wrapperStart = pageWrapper.getBoundingClientRect().top;
+    let wrapperEnd = pageWrapper.getBoundingClientRect().bottom + distance(line1);
+    let headerTl = gsap.timeline({paused: true});
+    headerTl.to(header, {opacity: 0, height: 0, duration: .5, ease: "power4.in"}); 
+
+    window.addEventListener("scroll", () => handleScrollWindow(wrapperStart, wrapperEnd));
+
+    function handleScrollWindow(start, end) {
+        if(window.scrollY >= start && window.scrollY <= end) headerTl.play();
+        else headerTl.reverse();
+    }
 }
 
 export default animateOnScrollPortfolioSection;

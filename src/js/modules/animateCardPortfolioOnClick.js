@@ -12,6 +12,7 @@ function animateCardPortfolioOnClick() {
     let close = popup.querySelector(".popup-portfolio-card__close");
     let closeLine1 = close.querySelector(".popup-portfolio-card__close-line_1");
     let closeLine2 = close.querySelector(".popup-portfolio-card__close-line_2");
+    let header = document.querySelector(".header");
 
     const setContent = (card, popupCard, popupTitle, popupDefinition, popupText) => {
         
@@ -98,10 +99,12 @@ function animateCardPortfolioOnClick() {
     let tl2 = gsap.timeline();
     let tl3 = gsap.timeline();
     let tl4 = gsap.timeline();
+    let tl5 = gsap.timeline();
     master.add(tl1, 0)
           .add(tl2, 0)
           .add(tl3, 1)
           .add(tl4, "<")
+          .add(tl5, 0)
 
     cards.forEach(card => {
         card.addEventListener("click", async function() {
@@ -128,8 +131,7 @@ function animateCardPortfolioOnClick() {
             tl2.clear()
             tl3.clear()
             tl4.clear()
-
-            console.log("xxx")
+            tl5.clear()
 
             tl1.set(img, {opacity: 0})
                .set(popupCard, {left: cardImgConfig.left, top: cardImgConfig.top, width: cardImgConfig.width, height: cardImgConfig.height, zIndex: 4, opacity: 1})
@@ -146,6 +148,9 @@ function animateCardPortfolioOnClick() {
 
             tl4.to(closeLine1, {width: "100%", duration: .3, ease: "power4.in"}, 1)
                .to(closeLine2, {width: "100%", duration: .3, ease: "power4.in"}, ">")
+               
+            tl5.set(header, {zIndex: -1})
+               .to(header, {opacity: 0, height: 0, duration: .5, ease: "power4.in"})
 
             master.play();
         })        
