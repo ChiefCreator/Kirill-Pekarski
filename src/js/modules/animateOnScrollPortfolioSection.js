@@ -4,12 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function animateOnScrollPortfolioSection() {
     gsap.registerPlugin(ScrollTrigger);
 
-    let pageWrapper = document.querySelector(".section-portfolio__wrapper");
+    let pageWrapper = document.querySelector(".section-skills__wrapper");
 
-    let line1 = document.querySelector(".section-portfolio__line_1");
-    let line2 = document.querySelector(".section-portfolio__line_2");
+    let line1 = document.querySelector(".section-skills__line_up");
+    let line2 = document.querySelector(".section-skills__line_bottom");
     let distance = (container) => {
-        let localItems = container.querySelectorAll(".portfolio-card")
+        let localItems = container.querySelectorAll(".skill-card")
         let lastItemBounds = localItems[localItems.length - 1].getBoundingClientRect()
         let containerBounds = container.getBoundingClientRect();
 
@@ -28,6 +28,8 @@ function animateOnScrollPortfolioSection() {
           invalidateOnRefresh: true
         }
       });
+
+      console.log(distance(line1))
 
     tl.to(line1, {x: () => -distance(line1), ease: "none"}, 0)
     tl.to(line2, {x: 0, ease: "none"}, 0); 

@@ -161,245 +161,171 @@
                             </div>
                         </div>
                     </section>
-                    <section class="section-stack">
-                        <div class="section-stack__wrapper">
-                            <div class="game">
-                                <div class="game__wrapper">
-                                    <canvas id="board"></canvas>
-                                </div>
-                                <div class="game__buttons">
-                                    @@include("./blocks/button.html", {
-                                        name: "Начать игру",
-                                        class: "game__start"
-                                    })
-                                </div>
-                            </div>
-                            <div class="stack-progress">
-                                <header class="stack-progress__header">
-                                    <h5 class="stack-progress__title">Мои скилы</h5>
-                                </header>
-                                <div class="stack-progress__body">
-                                    <div class="swiper">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <ul class="stack-progress__list">
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">HTML</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">100%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="100" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">CSS</h6>
-                                                                <span class="technology__percent"data-swiper-parallax="-150">90%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="90" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">SCSS</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">90%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="90" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">JavaScript</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">70%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="70" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">React</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">50%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="50" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">Git</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">100%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="100" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <ul class="stack-progress__list">
-                                                <li class="stack-progress__item">
-                                                    <div class="technology">
-                                                        <div class="technology__head">
-                                                            <h6 class="technology__name" data-swiper-parallax="-150">Gulp</h6>
-                                                            <span class="technology__percent" data-swiper-parallax="-150">60%</span>
-                                                        </div>
-                                                        <div class="technology__progress" data-value="60" data-swiper-parallax="-200">
-                                                            <div class="technology__progress-current"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="stack-progress__item">
-                                                    <div class="technology">
-                                                        <div class="technology__head">
-                                                            <h6 class="technology__name" data-swiper-parallax="-150">Webpack</h6>
-                                                            <span class="technology__percent" data-swiper-parallax="-150">60%</span>
-                                                        </div>
-                                                        <div class="technology__progress" data-value="60" data-swiper-parallax="-200">
-                                                            <div class="technology__progress-current"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="stack-progress__item">
-                                                    <div class="technology">
-                                                        <div class="technology__head">
-                                                            <h6 class="technology__name" data-swiper-parallax="-150">npm</h6>
-                                                            <span class="technology__percent" data-swiper-parallax="-150">100%</span>
-                                                        </div>
-                                                        <div class="technology__progress" data-value="100" data-swiper-parallax="-200">
-                                                            <div class="technology__progress-current"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="stack-progress__item">
-                                                    <div class="technology">
-                                                        <div class="technology__head">
-                                                            <h6 class="technology__name" data-swiper-parallax="-150">Node js</h6>
-                                                            <span class="technology__percent" data-swiper-parallax="-150">50%</span>
-                                                        </div>
-                                                        <div class="technology__progress" data-value="50" data-swiper-parallax="-200">
-                                                            <div class="technology__progress-current"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="stack-progress__item">
-                                                    <div class="technology">
-                                                        <div class="technology__head">
-                                                            <h6 class="technology__name" data-swiper-parallax="-150">Babel</h6>
-                                                            <span class="technology__percent" data-swiper-parallax="-150">60%</span>
-                                                        </div>
-                                                        <div class="technology__progress" data-value="60" data-swiper-parallax="-200">
-                                                            <div class="technology__progress-current"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="stack-progress__item">
-                                                    <div class="technology">
-                                                        <div class="technology__head">
-                                                            <h6 class="technology__name" data-swiper-parallax="-150">JQuery</h6>
-                                                            <span class="technology__percent" data-swiper-parallax="-150">50%</span>
-                                                        </div>
-                                                        <div class="technology__progress" data-value="50" data-swiper-parallax="-200">
-                                                            <div class="technology__progress-current"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                </ul>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <ul class="stack-progress__list">
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">Figma</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">70%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="70" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">Blender</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">70%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="70">
-                                                                <div class="technology__progress-current" data-swiper-parallax="-200"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">Bootstrap</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">85%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="85" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">GSAP</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">80%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="80" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">Three js</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">65%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="65" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="stack-progress__item">
-                                                        <div class="technology">
-                                                            <div class="technology__head">
-                                                                <h6 class="technology__name" data-swiper-parallax="-150">Photoshop</h6>
-                                                                <span class="technology__percent" data-swiper-parallax="-150">50%</span>
-                                                            </div>
-                                                            <div class="technology__progress" data-value="50" data-swiper-parallax="-200">
-                                                                <div class="technology__progress-current"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                    <section class="section-skills">
+                        <div class="section-skills__wrapper">
+                            <div class="section-skills__line section-skills__line_up">
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">01</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Проектирование интерфейса</h5>
+                                            <h5 class="skill-card__title-before">Проектирование интерфейса</h5>
+                                            <h5 class="skill-card__title-after">Проектирование интерфейса</h5>
                                         </div>
                                     </div>
-                                    <div class="stack-progress__pagination">
-                                        <div class="swiper-pagination"></div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">02</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Написание функционала</h5>
+                                            <h5 class="skill-card__title-before">Написание функционала</h5>
+                                            <h5 class="skill-card__title-after">Написание функционала</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">03</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Работа с БД</h5>
+                                            <h5 class="skill-card__title-before">Работа с БД</h5>
+                                            <h5 class="skill-card__title-after">Работа с БД</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">04</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Создание анимаций</h5>
+                                            <h5 class="skill-card__title-before">Создание анимаций</h5>
+                                            <h5 class="skill-card__title-after">Создание анимаций</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">05</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Разработка дизайна</h5>
+                                            <h5 class="skill-card__title-before">Разработка дизайна</h5>
+                                            <h5 class="skill-card__title-after">Разработка дизайна</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">06</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">3D-моделирование</h5>
+                                            <h5 class="skill-card__title-before">3D-моделирование</h5>
+                                            <h5 class="skill-card__title-after">3D-моделирование</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-skills__line section-skills__line_bottom">
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">12</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">SEO-оптимизация</h5>
+                                            <h5 class="skill-card__title-before">SEO-оптимизация</h5>
+                                            <h5 class="skill-card__title-after">SEO-оптимизация</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">11</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Доработка кода</h5>
+                                            <h5 class="skill-card__title-before">Доработка кода</h5>
+                                            <h5 class="skill-card__title-after">Доработка кода</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">10</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Тестирование</h5>
+                                            <h5 class="skill-card__title-before">Тестирование</h5>
+                                            <h5 class="skill-card__title-after">Тестирование</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">09</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Верстка сайтов</h5>
+                                            <h5 class="skill-card__title-before">Верстка сайтов</h5>
+                                            <h5 class="skill-card__title-after">Верстка сайтов</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">08</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Интеграция в систему управления</h5>
+                                            <h5 class="skill-card__title-before">Интеграция в систему управления</h5>
+                                            <h5 class="skill-card__title-after">Интеграция в систему управления</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-card__bg"></div>
+                                    <header class="skill-card__header">
+                                        <span class="skill-card__num">07</span>
+                                    </header>
+                                    <div class="skill-card__body">
+                                        <div class="skill-card__title-wrapper">
+                                            <h5 class="skill-card__title">Поддержка проектов</h5>
+                                            <h5 class="skill-card__title-before">Поддержка проектов</h5>
+                                            <h5 class="skill-card__title-after">Поддержка проектов</h5>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
+                    <section class="section-global"></section>
                 </main>
             </div>
         </div>

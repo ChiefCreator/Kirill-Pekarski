@@ -377,128 +377,115 @@
         height: 100%;
     }
 }
-.section-stack{
+.section-skills{
+    // width: 100vw;
     padding: 100px 0 100px 50px;
-    width: 100%;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
     &__wrapper{
-        width: 100%;
         overflow: hidden;
         display: flex;
-        gap: 50px;
+        flex-direction: column;
+        gap: 15px;
+        height: 100vh;
+    }
+    &__line{
+        flex: 1 1 50%;
+        display: inline-flex;
+        gap: 15px;
+        position: relative;
     }
 }
-.stack-definition{
-    flex: 1 1 50%;
+.skill-card{
+    flex: 1 1 33.33%;
+    min-width: 33.33%;
+    height: 100%;
+    background-color: #202020;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.stack-technology{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    &__logo{
-        flex: 0 0 35px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter:grayscale(100%)
-        }
-    }
-
-    &__title{
-        font-size: 20px;
-    }
-}
-.stack-progress{
-    flex: 1 1 50%;
-    display: block;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
     &__header{
-        margin-bottom: 20px;
+        width: 100%;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: start;
+        margin-bottom: auto;
     }
-    &__title{
-        font-size: 30px;
+    &__num{
+        margin-left: auto;
+        font-size: 40px;
         text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+    }
+    &__bg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5%;
+        height: 5%;
+        border-radius: 50%;
+        opacity: 0;
+        background-color: $color-secondary;
+        z-index: 0;
     }
     &__body{
         width: 100%;
         height: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .swiper{
-        display: inline-block;
-        width: 100% !important;
-        height: 100% !important;
-    }
-    .swiper-pagination{
-        position: static !important;
-        height: 50px;
-        .swiper-pagination-bullet{
-            width: 20px;
-            height: 5px;
-            background-color:#151515 !important;
-            border-radius: 0;
-        }
-    }
-    &__list{
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-}
-.technology{
-    &__head{
-        margin-bottom: 10px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
     }
-    &__name{
-        font-size: 25px;
+    &__title-wrapper{
+        position: relative;
     }
-    &__percent{
-        font-size: 20px;
-    }
-    &__progress{
-        width: 100%;
-        height: 4px;
-        background-color: #2f2f2f;
-        border-radius: 50px;
+    &__title{
+        margin-top: auto;
+        font-size: 78px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
         position: relative;
         overflow: hidden;
     }
-    &__progress-current{
+    &__title-before{
+        display: block;
         position: absolute;
         left: 0;
-        top: 0;
-        width: 0;
+        top:0;
+        width: 100%;
         height: 100%;
-        background-color: $color-secondary;
+        font-size: 78px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: transparent;
+        -webkit-text-fill-color: $color-text--darken;
+        -webkit-text-stroke-width: 1.3px;
+        height: 0;
+        overflow: hidden;
+    }
+    &__title-after{
+        display: block;
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        font-size: 78px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: transparent;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 1.3px;
+        width: 0;
+        overflow: hidden;
     }
 }
-.game{
-    flex: 1 1 50%;
-    display: flex;
-    flex-direction: column;
-    &__wrapper{
-        flex: 1 1 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    &__buttons{
-        flex: 0 0 auto;
-    }
-    #board{
-        width: 100%;
-        height: 200px;
-        position: relative;
-    }
+.section-global{
+    width: 100%;
+    height: 1000px;
 }
