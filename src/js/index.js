@@ -13,7 +13,9 @@ import animateCardPortfolioOnClick from "./modules/animateCardPortfolioOnClick";
 import animateOnScrollCardPortfolio from "./modules/animateOnScrollCardPortfolio";
 import animateSkillCardOnHover from "./modules/animateSkillCardOnHover";
 import animateHeader from "./modules/animateHeader";
+import globe from "./modules/globe";
 
+globe();
 animateDate();
 updateRouteLine();
 hoverPortrait();
@@ -24,7 +26,6 @@ animateOnScrollSectionAbout();
 animateSkillCardOnHover();
 animateOnScrollPortfolioSection();
 animateHeader();
-// hoverCardPortfolio();
 animateCardPortfolioOnClick();
 animateOnScrollCardPortfolio();
 initSlider();

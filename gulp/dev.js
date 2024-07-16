@@ -17,6 +17,8 @@ const notify = require("gulp-notify");
 
 const webpack = require("webpack-stream");
 
+const react = require('gulp-react');
+
 gulp.task("html:dev", function() {
     return gulp.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
         .pipe(plumber({
@@ -79,6 +81,11 @@ gulp.task("js:dev", function() {
         .pipe(webpack(require("./../webpack.config.js")))
         .pipe(gulp.dest("./build/js"))
 });
+gulp.task('react:dev', function () {
+    return gulp.src('./js/*.js')
+        .pipe(react())
+        .pipe(gulp.dest('./build/js'));
+});
 
 gulp.task("server:dev", function() {
     return gulp.src("./build/")
@@ -103,6 +110,7 @@ gulp.task("watch:dev", function() {
     gulp.watch("./src/icon/*", gulp.parallel("icons:dev"));
     gulp.watch("./src/video/*", gulp.parallel("video:dev"));
     gulp.watch("./src/js/**/*.js", gulp.parallel("js:dev"));
+    gulp.watch("./src/js/**/*.js", gulp.parallel("react:dev"));
     gulp.watch("./src/fonts/*", gulp.parallel("fonts:dev"));
     gulp.watch("./src/3d/*", gulp.parallel("3d:dev"));
 })
