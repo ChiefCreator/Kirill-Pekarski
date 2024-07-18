@@ -33,6 +33,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    pointer-events: none;
     &__wrapper{
         position: relative;
         width: 100%;
@@ -68,10 +69,12 @@
         font-size: 170px;
         text-transform: uppercase;
         &_vertical{
+            position: relative;
             writing-mode: vertical-rl;
             font-size: 34px;
             color: $color-secondary;
             margin-bottom: -2px;
+            cursor: pointer;
         }
     }
     &__definition{
@@ -86,6 +89,18 @@
         align-items: center;
         gap: 20px;
     }
+}
+.appeared-bg{
+    position: fixed;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0;
+    background-color: $color-secondary;
 }
 .portrait{
     flex: 0 0 600px;
@@ -235,23 +250,6 @@
             transform: translate(0, 50px);
         }
     }
-    &__number{
-        margin-top: auto;
-        align-self: center;
-        font-family: $font-nums;
-        font-size: 200px;
-        color: $color-text;
-        display: flex;
-        gap: 5px;
-        &-span_1{
-            display: block;
-            transform: translate(0, -50px);
-        }
-        &-span_2{
-            display: block;
-            transform: translate(0, 50px);
-        }
-    }
     &__block{
         flex: 0 0 auto;
         height: 330px;
@@ -289,7 +287,7 @@
         }
         .portfolio-card__button{
             left: 0;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(.5);
         }
     }
 }

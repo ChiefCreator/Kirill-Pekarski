@@ -24,8 +24,6 @@ function animateOnScrollCardPortfolio() {
         let title = portfolioCard.querySelector(".portfolio-card__title");
         let text = portfolioCard.querySelector(".portfolio-card__text");
         let button = portfolioCard.querySelector(".portfolio-card__button");
-        let number1 = portfolioCard.querySelector(".portfolio-card__number-span_1");
-        let number2 = portfolioCard.querySelector(".portfolio-card__number-span_2");
 
         splitText(title);
         splitText(text);
@@ -33,9 +31,7 @@ function animateOnScrollCardPortfolio() {
         let tl3 = gsap.timeline({scrollTrigger: {trigger: portfolioCard, scrub: 3, start: 'top bottom', end: '+=100'}});
 
         tl1.to(img, {scrollTrigger: {trigger: portfolioCard, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(0, 0)"})
-           .to(button, {scrollTrigger: {trigger: button, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(50%, -50%) scale(1)"})
-           .to(number1, {scrollTrigger: {trigger: portfolioCard, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(0, 0) scale(1)"})
-           .to(number2, {scrollTrigger: {trigger: portfolioCard, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(0, 0) scale(1)"})
+           .to(button, {scrollTrigger: {trigger: button, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(-50%, -50%) scale(1)"})
 
         tl3.add(animText(title))
         tl3.add(animText(text))
@@ -58,8 +54,6 @@ function animateOnScrollCardPortfolio() {
         let title = portfolioCard.querySelector(".portfolio-card__title");
         let text = portfolioCard.querySelector(".portfolio-card__text");
         let button = portfolioCard.querySelector(".portfolio-card__button");
-        let number1 = portfolioCard.querySelector(".portfolio-card__number-span_1");
-        let number2 = portfolioCard.querySelector(".portfolio-card__number-span_2");
 
         splitText(title);
         splitText(text);
@@ -68,8 +62,6 @@ function animateOnScrollCardPortfolio() {
 
         tl2.to(img, {scrollTrigger: {trigger: portfolioCard, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(0, 0)"})
            .to(button, {scrollTrigger: {trigger: button, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(50%, -50%) scale(1)"})
-           .to(number1, {scrollTrigger: {trigger: portfolioCard, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(0, 0) scale(1)"})
-           .to(number2, {scrollTrigger: {trigger: portfolioCard, scrub: 1, start: 'top bottom', end: '+=500'}, transform: "translate(0, 0) scale(1)"})
 
         tl3.add(animText(title))
         tl3.add(animText(text))
