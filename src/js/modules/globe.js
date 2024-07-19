@@ -24,21 +24,21 @@ function globe() {
       document.querySelector(".globe__circle").appendChild(renderer.domElement);
     
       scene = new Scene();
-      scene.add(new AmbientLight(0xbbbbbb, 0.3));
+      scene.add(new AmbientLight("white", 1));
     
       camera = new PerspectiveCamera();
       camera.aspect = globeContainerWidth / globeContainerHeight;
       camera.updateProjectionMatrix();
     
-      var dLight = new DirectionalLight(0xffffff, 0.8);
+      var dLight = new DirectionalLight("white", 0.8);
       dLight.position.set(-800, 2000, 400);
       camera.add(dLight);
     
-      var dLight1 = new DirectionalLight(0x7982f6, 1);
+      var dLight1 = new DirectionalLight("white", 1);
       dLight1.position.set(-200, 500, 200);
       camera.add(dLight1);
     
-      var dLight2 = new PointLight(0x8566cc, 0.5);
+      var dLight2 = new PointLight("white", 0.5);
       dLight2.position.set(-200, 500, 200);
       camera.add(dLight2);
     
@@ -51,8 +51,8 @@ function globe() {
     
       controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
-      controls.minDistance = 230;
-      controls.maxDistance = 230;
+      controls.minDistance = 290;
+      controls.maxDistance = 290;
       controls.minPolarAngle = Math.PI / 3.5;
       controls.maxPolarAngle = Math.PI - Math.PI / 3;
       controls.enableDamping = true;
@@ -68,7 +68,7 @@ function globe() {
       })
         .hexPolygonsData(countries.features)
         .hexPolygonResolution(3)
-        .hexPolygonMargin(0.6)
+        .hexPolygonMargin(0.7)
         .showAtmosphere(true)
         .atmosphereColor("#141414")
         .atmosphereAltitude(0.25)
@@ -78,14 +78,14 @@ function globe() {
               e.properties.ISO_A3
             )
           ) {
-            return "#ffffff";
-          } else return "#ffffff";
+            return "white";
+          } else return "white";
         });
     
       setTimeout(() => {
         Globe.arcsData(travelHistory.flights)
           .arcColor((e) => {
-            return e.status ? "white" : "white";
+            return e.status ? "#FF4900" : "#FF4900";
           })
           .arcAltitude((e) => {
             return e.arcAlt;
@@ -98,30 +98,15 @@ function globe() {
           .arcDashAnimateTime(1000)
           .arcsTransitionDuration(1000)
           .arcDashInitialGap((e) => e.order * 1)
-          // .labelsData(airportHistory.airports)
-          // .labelColor(() => "#ffcb21")
-          // .labelDotOrientation((e) => {
-          //   return e.text === "ALA" ? "top" : "right";
-          // })
-          // .labelDotRadius(0.3)
-          // .labelSize((e) => e.size)
-          // .labelText("city")
-          // .labelResolution(6)
-          // .labelAltitude(0.01)
-          // .pointsData(airportHistory.airports)
-          // .pointColor(() => "#ffffff")
-          // .pointsMerge(true)
-          // .pointAltitude(0.07)
-          // .pointRadius(0.05);
       }, 1000);
     
       Globe.rotateY(-Math.PI * (5 / 9));
       Globe.rotateZ(-Math.PI / 6);
       const globeMaterial = Globe.globeMaterial();
-      globeMaterial.color = new Color("black");
-      globeMaterial.emissive = new Color("black");
-      globeMaterial.emissiveIntensity = 1;
-      globeMaterial.shininess = 0;
+      globeMaterial.color = new Color("#202020");
+      // globeMaterial.emissive = new Color("#202020");
+      globeMaterial.emissiveIntensity = 0;
+      globeMaterial.shininess = 1;
 
       scene.add(Globe);
     }
