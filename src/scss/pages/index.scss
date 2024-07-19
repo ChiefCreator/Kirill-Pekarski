@@ -527,8 +527,11 @@
     padding: 100px 0 100px 50px;
     &__wrapper{
         display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 75px;
     }
-    &__form-wrapper{
+    &__feedback{
         flex: 1 1 50%;
     }
     &__globe{
@@ -536,100 +539,149 @@
     }
 }
 .form{
-    display: flex;
-    position: relative;
-    &__route{
-        position: absolute;
-        width: 2px;
-        height: 100%;
-        background-color: white;
-    }
-    &__body{
-
-    }
-    &__block{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-    &__line{
-        height: 2px;
-        background-color: white;
-        &_odd{
-            flex: 0 0 30px;
-        }
-        &_even{
-            flex: 0 0 70px;
-        }
-    }
-    &__inputs{
+    &__input-list{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
-    &__input{
-        flex: 0 0 350px;
+    &__input-row{
+        display: flex;
+        gap: 15px;
+    }
+    &__input-item{
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__input-label{
+        color: $color-text;
+        font-size: 14px;
+        margin-left: 20px;
+    }
+    &__button-group{
+        margin-top: 30px;
     }
 }
-.input{
-    height: 45px;
-    background-color: rgb(239, 239, 239);
-    border-radius: 50px;
+.input-group{
+    border: 2px solid rgb(68, 68, 68);
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 17px 10px;
+    cursor: pointer;
+    transition: border .5s ease;
     &__wrapper{
-        width: 100%;
-        height: 100%;
-        // overflow: hidden;
         display: flex;
         align-items: center;
         gap: 5px;
-        padding: 0 5px;
-    }
-    &__inp-wrapper{
-        flex: 1 1 auto;
         position: relative;
     }
-    &__inp{
-        width: 100%;
+    &__block{
+        flex: 1 1 auto;
+        input{
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: $color-text;
+            &::placeholder{
+                color: rgb(68, 68, 68);
+                transition: color .5s ease;
+            }
+        }
+    }
+    &__error{
+        flex: 0 0 20px;
         height: 100%;
-        background-color: transparent;
-        &:focus + .input__text{
-            color: white;
-            top: 0;
-            transform: translate(15px, -150%);
-        }
-        &:invalid + .input__text{
-            color: white;
-            top: 0;
-            transform: translate(15px, -150%);
-        }
-    }
-    &__text{
-        color: black;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translate(0, -50%);
-        transition: all .5s ease;
-    }
-    &__button{
-        flex: 0 0 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: #202020;
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
     }
-    &__error{
-
+    &__warning{
+        flex: 0 0 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(0, 100%);
+        transition: transform .3s ease;
+        &::before{
+            content: "\21";
+            @include font-awesome;
+            color: rgb(236, 236, 236);
+        }
+    }
+    .error-active{
+        transform: translate(0, 0);
+    }
+    &:hover{
+        border: 2px solid $color-secondary;
+    }
+    &:hover input::placeholder{
+        color: $color-secondary;
     }
 }
-.section-globe{
-    width: 100%;
-    padding: 100px 0 100px 50px;
+.textarea-group{
+    border: 2px solid rgb(68, 68, 68);
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 17px 10px 0 10px;
+    cursor: pointer;
+    transition: border .5s ease;
     &__wrapper{
-
+        width: 100%;
+        position: relative;
+    }
+    &__block{
+        width: 100%;
+        textarea{
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            min-height: 75px;
+            max-height: 150px;
+            resize: vertical;
+            color: $color-text;
+            &::placeholder{
+                color: rgb(68, 68, 68);
+                transition: color .5s ease;
+            }
+        }
+    }
+    &__error{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+    }
+    &__warning{
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(0, 100%);
+        transition: transform .3s ease;
+        &::before{
+            content: "\21";
+            @include font-awesome;
+            color: rgb(236, 236, 236);
+        }
+    }
+    .error-active{
+        transform: translate(0, 0);
+    }
+    &:hover{
+        border: 2px solid $color-secondary;
+    }
+    &:hover textarea::placeholder{
+        color: $color-secondary;
     }
 }
 .globe{
@@ -659,7 +711,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 7vw;
+        font-size: 3.5vw;
         text-transform: uppercase;
         text-wrap: nowrap;
         pointer-events: none;
@@ -674,5 +726,22 @@
             -webkit-text-fill-color: white;
             color: white;
         }
+    }
+}
+.popup-submit-result{
+    position: fixed;
+    z-index: 3;
+    right: 15px;
+    transform: translate(calc(100% + 15px), 0);
+    top: 85px;
+    padding: 10px;
+    background-color: #202020;
+    border-radius: 10px;
+    transition: transform .5s ease;
+    &__text{
+
+    }
+    &_active{
+        transform: translate(0, 0);
     }
 }

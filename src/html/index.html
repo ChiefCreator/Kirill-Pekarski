@@ -36,6 +36,9 @@
             </footer>
         </div>
     </div>
+    <div class="popup-submit-result">
+        <p class="popup-submit-result__text">Форма отправлено успешно</p>
+    </div>
     <div class="appeared-bg"></div>
     @@include("./blocks/header.html")
     <div class="wrapper">
@@ -342,95 +345,87 @@
                             </div>
                         </div>
                     </section>
-                    <section class="section-globe">
-                        <div class="section-globe__wrapper">
-                            <div class="globe">
-                                <h2 class="globe__title globe__title_back">Я работаю с клиентами по всему миру</h2>
-                                <div class="globe__circle">
-                                    <h2 class="globe__title globe__title_front">Я работаю с клиентами по всему миру</h2>
+                    <section class="section-contact">
+                        <div class="section-contact__wrapper">
+                            <div class="section-contact__feedback">
+                                <form action="https://api.web3forms.com/submit" method="POST" novalidate class="form">
+                                    <input type="hidden" name="access_key" value="94b709b5-920c-4376-8e7e-4ebb78d782fd">
+                                    <div class="form__input-list">
+                                        <div class="form__input-row">
+                                            <div class="form__input-item">
+                                                <label class="form__input-label">Введите имя</label>
+                                                <div class="input-group">
+                                                    <div class="input-group__wrapper">
+                                                        <div class="input-group__block">
+                                                            <input id="input-name" type="text" name="name" placeholder="Ваше имя" required>
+                                                        </div>
+                                                        <div class="input-group__error">
+                                                            <span class="input-group__warning"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form__input-item">
+                                                <label class="form__input-label">Введите фамилию</label>
+                                                <div class="input-group">
+                                                    <div class="input-group__wrapper">
+                                                        <div class="input-group__block">
+                                                            <input id="input-surname" type="text" name="surname" placeholder="Ваша фамилия" required>
+                                                        </div>
+                                                        <div class="input-group__error">
+                                                            <span class="input-group__warning"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__input-row">
+                                            <div class="form__input-item">
+                                                <label class="form__input-label">Введите почту</label>
+                                                <div class="input-group">
+                                                    <div class="input-group__wrapper">
+                                                        <div class="input-group__block">
+                                                            <input id="input-mail" type="email" name="email" placeholder="Ваша почта" required>
+                                                        </div>
+                                                        <div class="input-group__error">
+                                                            <span class="input-group__warning"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__input-row">
+                                            <div class="form__input-item">
+                                                <label class="form__input-label">Введите сообщение</label>
+                                                <div class="textarea-group">
+                                                    <div class="textarea-group__wrapper">
+                                                        <div class="textarea-group__block">
+                                                            <textarea id="textarea-message" name="message" placeholder="Ваше сообщение" required></textarea>
+                                                        </div>
+                                                        <div class="textarea-group__error">
+                                                            <span class="textarea-group__warning"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__button-group">
+                                        <button class="form__send button-submit" type="submit"></button>
+                                    </div>
+                                    <div id="result"></div>
+                                </form>
+                            </div>
+                            <div class="section-contact__globe">
+                                <div class="globe">
+                                    <!-- <h2 class="globe__title globe__title_back">Я работаю с клиентами по всему миру</h2> -->
+                                    <div class="globe__circle">
+                                        <!-- <h2 class="globe__title globe__title_front">Я работаю с клиентами по всему миру</h2> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <!-- <section class="section-contact">
-                        <div class="section-contact__wrapper">
-                            <div class="section-contact__form-wrapper">
-                                <form class="form">
-                                    <div class="form__route">
-                                        
-                                    </div>
-                                    <div class="form__body">
-                                        <div class="form__block">
-                                            <div class="form__line form__line_odd"></div>
-                                            <div class="input form__input form__input_name">
-                                                <div class="input__wrapper">
-                                                    <div class="input__inp-wrapper">
-                                                        <input class="input__inp">
-                                                        <span class="input__text">Введите имя</span>
-                                                    </div>
-                                                </div>
-                                                <div class="input__error">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form__block">
-                                            <div class="form__line form__line_even"></div>
-                                            <div class="input form__input form__input_mail">
-                                                <div class="input__wrapper">
-                                                    <div class="input__inp-wrapper">
-                                                        <input class="input__inp">
-                                                        <span class="input__text">Введите почту</span>
-                                                    </div>
-                                                </div>
-                                                <div class="input__error">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form__block">
-                                            <div class="form__line form__line_odd"></div>
-                                            <div class="input form__input form__input_time">
-                                                <div class="input__wrapper">
-                                                    <div class="input__inp-wrapper">
-                                                        <input class="input__inp">
-                                                        <span class="input__text">Введите сроки</span>
-                                                    </div>
-                                                    <div class="input__button">
-                                                        <img src="./../icon/Arrow 1.svg">
-                                                    </div>
-                                                </div>
-                                                <div class="input__error">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form__block">
-                                            <div class="form__line form__line_even"></div>
-                                            <div class="input form__input form__input_budget">
-                                                <div class="input__wrapper">
-                                                    <div class="input__inp-wrapper">
-                                                        <input class="input__inp">
-                                                        <span class="input__text">Введите бюджет</span>
-                                                    </div>
-                                                    <div class="input__button">
-                                                        <img src="./../icon/Arrow 1.svg">
-                                                    </div>
-                                                </div>
-                                                <div class="input__error">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form__button">send</div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="section-contact__globe">
-                                
-                            </div>
-                        </div>
-                    </section> -->
                 </main>
             </div>
         </div>

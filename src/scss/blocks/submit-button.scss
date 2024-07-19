@@ -1,0 +1,70 @@
+.button-submit{
+    text-align: center;
+    border-radius: 25px;
+    background: $color-secondary;
+    border: 2px solid $color-secondary;
+    color:white;
+    letter-spacing:1px;
+    font-size:15px;
+    font-weight:bold;
+    cursor: pointer;
+    width: 220px;
+    height: 50px;
+    margin-right: auto;
+    transition: all 0.25s ease;
+    &:hover{
+        color:white;
+        background: $color-secondary;
+    }
+    &:active{
+        letter-spacing: 2px;
+    }
+    &::after{
+        content:"Отправить";
+    }
+    &_onclick{
+        border-radius: 50%;
+        width: 50px;
+        border-color:rgb(68, 68, 68);
+        border-width:3px;
+        font-size:0;
+        border-left-color: $color-secondary;
+        background-color: transparent;
+        animation: rotating 2s 0.25s linear infinite;
+        &::after{
+            content:"";
+        }
+        &:hover{
+            color: $color-secondary;
+            background: transparent;
+        }
+        @keyframes rotating {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+        }
+    }
+    &_validate-success{
+        font-size:15px;
+        color: white;
+        background: $color-secondary;
+        &::after{
+            content:"\f00c";
+            @include font-awesome;
+            color: white;
+        }
+    }
+    &_validate-error{
+        font-size:15px;
+        color: white;
+        background: $color-secondary;
+        &::after{
+            content:"\f00d";
+            @include font-awesome;
+            color: white;
+        }
+    }
+}

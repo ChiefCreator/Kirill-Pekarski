@@ -15,7 +15,10 @@ import animateSkillCardOnHover from "./modules/animateSkillCardOnHover";
 import animateHeader from "./modules/animateHeader";
 import globe from "./modules/globe";
 import appearBg from "./modules/bgAppear";
+import formValidation from "./modules/formValidation";
+import formSend from "./modules/formSend";
 
+formSend();
 appearBg();
 animateOnScrollCardPortfolio();
 globe();
