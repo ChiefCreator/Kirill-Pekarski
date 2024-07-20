@@ -17,7 +17,9 @@ import globe from "./modules/globe";
 import appearBg from "./modules/bgAppear";
 import formValidation from "./modules/formValidation";
 import formSend from "./modules/formSend";
+import stackAppear from "./modules/stackAppear";
 
+stackAppear();
 formSend();
 appearBg();
 animateOnScrollCardPortfolio();

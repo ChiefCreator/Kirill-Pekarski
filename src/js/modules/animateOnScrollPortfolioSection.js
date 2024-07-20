@@ -34,17 +34,29 @@ function animateOnScrollPortfolioSection() {
 
     // header
 
+    function getOffsetTop(el) {
+        let top = el.offsetTop;
+        let parent = el.offsetParent;
+
+        if (!parent) return top;
+        else return top + getOffsetTop(parent)
+    }
+
     let header = document.querySelector(".header");
-    let wrapperStart = pageWrapper.getBoundingClientRect().top;
-    let wrapperEnd = pageWrapper.getBoundingClientRect().bottom + distance(line1);
-    let headerTl = gsap.timeline({paused: true});
-    headerTl.to(header, {opacity: 0, height: 0, duration: .5, ease: "power4.in"}); 
+    let buttonStack = document.querySelector(".stack-button");
+
+    let wrapperStart = getOffsetTop(pageWrapper);
+    let wrapperEnd = getOffsetTop(pageWrapper) + distance(line1);
+
+    let wrapperTl = gsap.timeline({paused: true});
+    wrapperTl.to(header, {opacity: 0, height: 0, duration: .5, ease: "power4.in"})
+             .to(buttonStack, {transform: "translate(0, 0)", duration: .5, ease: "power4.in"}, "<")
 
     window.addEventListener("scroll", () => handleScrollWindow(wrapperStart, wrapperEnd));
 
     function handleScrollWindow(start, end) {
-        if(window.scrollY >= start && window.scrollY <= end) headerTl.play();
-        else headerTl.reverse();
+        if(window.scrollY >= start && window.scrollY <= end) wrapperTl.play();
+        else wrapperTl.reverse();
     }
 }
 
