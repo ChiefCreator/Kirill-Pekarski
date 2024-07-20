@@ -1,0 +1,24 @@
+.footer{
+    width: 100%;
+    height: 60px;
+    backdrop-filter: blur(5px);
+    &__container{
+        height: 100%;
+    }
+    &__content{
+        width: 100%;
+        height: 100%;
+        border-top: 1px solid $color-primary--light;
+        display: flex;
+        align-items: center;
+    }
+    &__versions{
+        margin-left: auto;
+        flex: 0 0 auto;
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
