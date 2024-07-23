@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Kirill Pekarski</title>
 </head>
-<body>
+<body class="body">
     <div class="overblock"></div>
     <div class="popup-card"><img></div>
     <div class="popup-portfolio-card">
@@ -23,7 +23,7 @@
                     <p class="popup-portfolio-card__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id modi explicabo voluptate laudantium</p>
                 </div>
                 <div class="popup-portfolio-card__img">
-
+                    <img src="./../img/Panto.bmp">
                 </div>
             </div>
             <footer class="popup-portfolio-card__footer">
@@ -220,19 +220,6 @@
             </ul>
         </div>
     </div>
-    <button class="circle-link stack-button">
-    <div class="circle-link__wrapper"></div>
-    <a class="circle-link__link">
-        <span class="circle-link__title">Мой стэк</span>
-        <div class="circle-link__top"><span>Мой стэк</span></div>
-        <div class="circle-link__bottom"><span>Мой стэк</span></div>
-        <div class="circle-link__arrow">
-            <span class="circle-link__arrow-line"></span>
-            <span class="circle-link__arrow-line-s circle-link__arrow-line-s_top"></span>
-            <span class="circle-link__arrow-line-s circle-link__arrow-line-s_bottom"></span>
-        </div>
-    </a>
-</button>
     <header class="header">
     <div class="container header__container">
         <div class="header__content">
@@ -266,9 +253,55 @@
     <span class="link__slice"></span>
 </a>
             </div>
+            <a type="button" class="header__menu-button">
+                <span></span>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu__container">
+            <div class="mobile-menu__links">
+                <a class="link">
+    <span class="link__title">Обо мне</span>
+    <div class="link__top"><span>Обо мне</span></div>
+    <div class="link__bottom"><span>Обо мне</span></div>
+    <span class="link__slice"></span>
+</a>
+                <a class="link">
+    <span class="link__title">Портфолио</span>
+    <div class="link__top"><span>Портфолио</span></div>
+    <div class="link__bottom"><span>Портфолио</span></div>
+    <span class="link__slice"></span>
+</a>
+                <a class="link">
+    <span class="link__title">Навыки</span>
+    <div class="link__top"><span>Навыки</span></div>
+    <div class="link__bottom"><span>Навыки</span></div>
+    <span class="link__slice"></span>
+</a>
+                <a class="link">
+    <span class="link__title">Связаться</span>
+    <div class="link__top"><span>Связаться</span></div>
+    <div class="link__bottom"><span>Связаться</span></div>
+    <span class="link__slice"></span>
+</a>
+            </div>
         </div>
     </div>
 </header>
+    <button class="circle-link stack-button">
+    <div class="circle-link__wrapper"></div>
+    <a class="circle-link__link">
+        <span class="circle-link__title">Мой стэк</span>
+        <div class="circle-link__top"><span>Мой стэк</span></div>
+        <div class="circle-link__bottom"><span>Мой стэк</span></div>
+        <div class="circle-link__arrow">
+            <span class="circle-link__arrow-line"></span>
+            <span class="circle-link__arrow-line-s circle-link__arrow-line-s_top"></span>
+            <span class="circle-link__arrow-line-s circle-link__arrow-line-s_bottom"></span>
+        </div>
+    </a>
+</button>
     <div class="wrapper">
         <div class="container">
             <div class="wrapper__content">
@@ -385,10 +418,6 @@
                             </div>
                             <div class="portfolio-card portfolio-card_even portfolio-card_Nikita-Efremov" id="nikita_efremov">
                                 <div class="portfolio-card__wrapper">
-                                    <div class="portfolio-card__info">
-                                        <p class="portfolio-card__title">Nikita Efremov</p>
-                                        <p class="portfolio-card__text">Разработка & дизайн</p>
-                                    </div>
                                     <div class="portfolio-card__block">
                                         <button class="circle-link portfolio-card__button">
     <div class="circle-link__wrapper"></div>
@@ -406,6 +435,10 @@
                                         <div class="portfolio-card__image">
                                             <img src="./../img/Nikita Efremov.bmp">
                                         </div>
+                                    </div>
+                                    <div class="portfolio-card__info">
+                                        <p class="portfolio-card__title">Nikita Efremov</p>
+                                        <p class="portfolio-card__text">Разработка & дизайн</p>
                                     </div>
                                 </div>
                             </div>
@@ -437,10 +470,6 @@
                             </div>
                             <div class="portfolio-card portfolio-card_even portfolio-card_Tennis" id="tennis">
                                 <div class="portfolio-card__wrapper">
-                                    <div class="portfolio-card__info">
-                                        <p class="portfolio-card__title">Tennis</p>
-                                        <p class="portfolio-card__text">Разработка</p>
-                                    </div>
                                     <div class="portfolio-card__block">
                                         <button class="circle-link portfolio-card__button">
     <div class="circle-link__wrapper"></div>
@@ -458,6 +487,10 @@
                                         <div class="portfolio-card__image">
                                             <img src="./../img/Tennis.bmp">
                                         </div>
+                                    </div>
+                                    <div class="portfolio-card__info">
+                                        <p class="portfolio-card__title">Tennis</p>
+                                        <p class="portfolio-card__text">Разработка</p>
                                     </div>
                                 </div>
                             </div>
@@ -631,9 +664,9 @@
                                     </header>
                                     <div class="skill-card__body">
                                         <div class="skill-card__title-wrapper">
-                                            <h5 class="skill-card__title">Интеграция в систему управления</h5>
-                                            <h5 class="skill-card__title-before">Интеграция в систему управления</h5>
-                                            <h5 class="skill-card__title-after">Интеграция в систему управления</h5>
+                                            <h5 class="skill-card__title">Интеграция в CRM-систему</h5>
+                                            <h5 class="skill-card__title-before">Интеграция в CRM-систему</h5>
+                                            <h5 class="skill-card__title-after">Интеграция в CRM-систему</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -644,7 +677,9 @@
                                     </header>
                                     <div class="skill-card__body">
                                         <div class="skill-card__title-wrapper">
-                                            <h5 class="skill-card__title">Поддержка проектов</h5>
+                                            <h5 class="skill-card__title">Поддержка проектов
+                                                <span class="skill-card__title-bg"></span>
+                                            </h5>
                                             <h5 class="skill-card__title-before">Поддержка проектов</h5>
                                             <h5 class="skill-card__title-after">Поддержка проектов</h5>
                                         </div>

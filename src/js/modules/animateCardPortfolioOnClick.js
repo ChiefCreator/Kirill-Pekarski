@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+import toggleScroll from "./toggleScroll";
 
 function animateCardPortfolioOnClick() {
     let cards = document.querySelectorAll(".portfolio-card");
@@ -71,13 +72,6 @@ function animateCardPortfolioOnClick() {
           });
     }
 
-    let portfolioCardConfig = {
-        left: parseFloat(document.querySelector(".popup-portfolio-card__img").getBoundingClientRect().left),
-        top: parseFloat(document.querySelector(".popup-portfolio-card__img").getBoundingClientRect().top),
-        width: parseFloat(document.querySelector(".popup-portfolio-card__img").getBoundingClientRect().width),
-        height: parseFloat(document.querySelector(".popup-portfolio-card__img").getBoundingClientRect().height)
-    }
-
     const splitText = (item) => {
         item.innerHTML = item.textContent.replace(/(\S*)/g, m => {
             return `<div class="split-text__word">` +
@@ -111,8 +105,6 @@ function animateCardPortfolioOnClick() {
 
             await setContent(card, popupCard, popupTitle, popupDefinition, popupText);
 
-            console.log("start")
-
             splitText(popupTitle);
             splitText(popupDefinition);
             splitText(popupText);
@@ -126,6 +118,12 @@ function animateCardPortfolioOnClick() {
                 width: parseFloat(img.getBoundingClientRect().width),
                 height: parseFloat(img.getBoundingClientRect().height),
             }
+            let popupImgConfig = {
+                left: parseFloat(document.querySelector(".popup-portfolio-card__img").getBoundingClientRect().left),
+                top: parseFloat(document.querySelector(".popup-portfolio-card__img").getBoundingClientRect().top),
+                width: parseFloat(document.querySelector(".popup-portfolio-card__img").getBoundingClientRect().width),
+                height: parseFloat(document.querySelector(".popup-portfolio-card__img").getBoundingClientRect().height)
+            }
 
             tl1.clear()
             tl2.clear()
@@ -135,8 +133,9 @@ function animateCardPortfolioOnClick() {
 
             tl1.set(img, {opacity: 0})
                .set(popupCard, {left: cardImgConfig.left, top: cardImgConfig.top, width: cardImgConfig.width, height: cardImgConfig.height, zIndex: 4, opacity: 1})
-               .to(popupCard, {left: popupImgConfig.left, top: popupImgConfig.top, height: popupImgConfig.height, duration: 1, ease: "power4.out"})
+               .to(popupCard, {left: popupImgConfig.left, top: popupImgConfig.top, height: popupImgConfig.height, width: popupImgConfig.width,  duration: 1, ease: "power4.out"})
 
+               console.log(popupImgConfig)
             tl2.set(popup, {zIndex: 3})
                .to(popup, {opacity: 1, duration: 1, ease: "power4.out"}, 0)
                .to(popuLine, {opacity: 1, width: "100%", duration: 2, ease: "power4.out"}, 0.5)
@@ -153,11 +152,13 @@ function animateCardPortfolioOnClick() {
                .to(header, {opacity: 0, height: 0, duration: .5, ease: "power4.in"})
 
             master.play();
+            toggleScroll(true);
         })        
     })
 
     close.addEventListener("click", function() {
         master.reverse();
+        toggleScroll(false, 3000);
     })
 
     function animText(el) {

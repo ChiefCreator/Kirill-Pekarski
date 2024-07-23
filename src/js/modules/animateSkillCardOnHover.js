@@ -19,6 +19,7 @@ function animateSkillCardOnHover() {
 
         tl1.to(titleBefore, {height: "100%", duration: .8, ease: "linear"})
            .to(titleAfter, {width: "100%", duration: .8, ease: "linear"}, "<+=50%")
+           
         tl2.to(bg, {transform: "scale(60)", opacity: 1, duration: .4, ease: "linear"})
 
         master.add(tl1)

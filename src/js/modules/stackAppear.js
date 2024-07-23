@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+import toggleScroll from "./toggleScroll";
 
 function stackAppear() {
     const buttonStack = document.querySelector(".stack-button");
@@ -41,12 +42,14 @@ function stackAppear() {
     buttonStack.addEventListener("click", function() {
         if (buttonStack.classList.contains("stack-button_active")) {
             master.reverse();
+            toggleScroll(false, 2300);
 
             document.querySelector(".circle-link__title").textContent = "Мой стэк";
             document.querySelector(".circle-link__top span").textContent = "Мой стэк";
             document.querySelector(".circle-link__bottom span").textContent = "Мой стэк";
         } else {
             master.restart();  
+            toggleScroll(true);
                       
             document.querySelector(".circle-link__title").textContent = "Закрыть";
             document.querySelector(".circle-link__top span").textContent = "Закрыть";

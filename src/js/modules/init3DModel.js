@@ -2,17 +2,18 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 function init3DModel() {
-    const canvas = document.querySelector('canvas.webgl')
+    const canvas = document.querySelector('canvas.webgl');
+    const wrapper = document.querySelector(".portrait");
     const scene = new THREE.Scene();
     const sizes = {
-        width: 600,
-        height: 700
+        width: wrapper.offsetWidth,
+        height: wrapper.offsetHeight,
     }
     
     const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
     camera.position.x = 0
-    camera.position.y = -0.6
-    camera.position.z = 5
+    camera.position.y = -0.80
+    camera.position.z = 4.7
     scene.add(camera)
     
     const pointLight = new THREE.PointLight(0xffffff, 13)

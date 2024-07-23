@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Kirill Pekarski</title>
 </head>
-<body>
+<body class="body">
     <div class="overblock"></div>
     <div class="popup-card"><img></div>
     <div class="popup-portfolio-card">
@@ -23,7 +23,7 @@
                     <p class="popup-portfolio-card__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id modi explicabo voluptate laudantium</p>
                 </div>
                 <div class="popup-portfolio-card__img">
-
+                    <img src="./../img/Panto.bmp">
                 </div>
             </div>
             <footer class="popup-portfolio-card__footer">
@@ -220,8 +220,8 @@
             </ul>
         </div>
     </div>
-    @@include("./blocks/circle-link.html", {class: "stack-button", title: "Мой стэк"})
     @@include("./blocks/header.html")
+    @@include("./blocks/circle-link.html", {class: "stack-button", title: "Мой стэк"})
     <div class="wrapper">
         <div class="container">
             <div class="wrapper__content">
@@ -306,15 +306,15 @@
                             </div>
                             <div class="portfolio-card portfolio-card_even portfolio-card_Nikita-Efremov" id="nikita_efremov">
                                 <div class="portfolio-card__wrapper">
-                                    <div class="portfolio-card__info">
-                                        <p class="portfolio-card__title">Nikita Efremov</p>
-                                        <p class="portfolio-card__text">Разработка & дизайн</p>
-                                    </div>
                                     <div class="portfolio-card__block">
                                         @@include("./blocks/circle-link.html", {class: "portfolio-card__button", title: "Посетить"})
                                         <div class="portfolio-card__image">
                                             <img src="./../img/Nikita Efremov.bmp">
                                         </div>
+                                    </div>
+                                    <div class="portfolio-card__info">
+                                        <p class="portfolio-card__title">Nikita Efremov</p>
+                                        <p class="portfolio-card__text">Разработка & дизайн</p>
                                     </div>
                                 </div>
                             </div>
@@ -334,15 +334,15 @@
                             </div>
                             <div class="portfolio-card portfolio-card_even portfolio-card_Tennis" id="tennis">
                                 <div class="portfolio-card__wrapper">
-                                    <div class="portfolio-card__info">
-                                        <p class="portfolio-card__title">Tennis</p>
-                                        <p class="portfolio-card__text">Разработка</p>
-                                    </div>
                                     <div class="portfolio-card__block">
                                         @@include("./blocks/circle-link.html", {class: "portfolio-card__button", title: "Посетить"})
                                         <div class="portfolio-card__image">
                                             <img src="./../img/Tennis.bmp">
                                         </div>
+                                    </div>
+                                    <div class="portfolio-card__info">
+                                        <p class="portfolio-card__title">Tennis</p>
+                                        <p class="portfolio-card__text">Разработка</p>
                                     </div>
                                 </div>
                             </div>
@@ -504,9 +504,9 @@
                                     </header>
                                     <div class="skill-card__body">
                                         <div class="skill-card__title-wrapper">
-                                            <h5 class="skill-card__title">Интеграция в систему управления</h5>
-                                            <h5 class="skill-card__title-before">Интеграция в систему управления</h5>
-                                            <h5 class="skill-card__title-after">Интеграция в систему управления</h5>
+                                            <h5 class="skill-card__title">Интеграция в CRM-систему</h5>
+                                            <h5 class="skill-card__title-before">Интеграция в CRM-систему</h5>
+                                            <h5 class="skill-card__title-after">Интеграция в CRM-систему</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -517,7 +517,9 @@
                                     </header>
                                     <div class="skill-card__body">
                                         <div class="skill-card__title-wrapper">
-                                            <h5 class="skill-card__title">Поддержка проектов</h5>
+                                            <h5 class="skill-card__title">Поддержка проектов
+                                                <span class="skill-card__title-bg"></span>
+                                            </h5>
                                             <h5 class="skill-card__title-before">Поддержка проектов</h5>
                                             <h5 class="skill-card__title-after">Поддержка проектов</h5>
                                         </div>

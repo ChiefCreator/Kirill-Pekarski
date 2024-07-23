@@ -12,13 +12,14 @@ import animateOnScrollPortfolioSection from "./modules/animateOnScrollPortfolioS
 import animateCardPortfolioOnClick from "./modules/animateCardPortfolioOnClick";
 import animateOnScrollCardPortfolio from "./modules/animateOnScrollCardPortfolio";
 import animateSkillCardOnHover from "./modules/animateSkillCardOnHover";
-import animateHeader from "./modules/animateHeader";
 import globe from "./modules/globe";
 import appearBg from "./modules/bgAppear";
 import formValidation from "./modules/formValidation";
 import formSend from "./modules/formSend";
 import stackAppear from "./modules/stackAppear";
+import animateBurgerMenu from "./modules/animateBurgerMenu";
 
+animateBurgerMenu();
 stackAppear();
 formSend();
 appearBg();
@@ -33,6 +34,5 @@ animateOnScrollMainSection();
 animateOnScrollSectionAbout();
 animateSkillCardOnHover();
 animateOnScrollPortfolioSection();
-animateHeader();
 animateCardPortfolioOnClick();
 init3DModel();

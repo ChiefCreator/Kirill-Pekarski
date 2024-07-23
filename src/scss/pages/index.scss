@@ -9,13 +9,21 @@
     height: calc(100vh - 60px);
     position: sticky;
     top: 60px;
+    @media (max-width: 767px) {
+        display: none;
+    }
 }
 .main{
     flex: 1 1 100%;
+    padding: 0 clamp(1.25rem, -7.692rem + 14.42vw, 3.125rem);
+    @media (max-width: 767px) {
+        padding: 0;
+    }
 }
 .section-main{
-    padding-left: 100px;
     width: 100%;
+    height: 1px;
+    min-height: calc(100vh - 60px);
     position: relative;
     &__wrapper{
         width: 100%;
@@ -24,6 +32,13 @@
         align-items: center;
         position: relative;
         z-index: 1;
+    }
+    @media screen and (max-width: 992px) {
+        height: auto;
+        &__wrapper{
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 .back-div{
@@ -38,40 +53,47 @@
         position: relative;
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
     &__text{
         position: absolute;
         font-weight: 800;
         text-transform: uppercase;
+        text-wrap: nowrap;
         color: #202020;
         &_1{
-            top: -10px;
-            left: 50px;
-            font-size: 250px;
+            top: -45px;
+            left: 0;
+            font-size: clamp(14.063rem, 6.611rem + 12.02vw, 15.625rem);
         }
         &_2{
-            top: 400px;
-            left: 50px;
-            font-size: 250px;
+            bottom: -40px;
+            left: 0;
+            font-size: clamp(14.063rem, 6.611rem + 12.02vw, 15.625rem);
         }
         &_f{
             display: inline-block;
         }
     }
+    @media (max-width: 991px) {
+        display: none;
+    }
 }
 .brief-information{
     flex: 1 1 auto;
+    margin-top: 50px;
     height: auto;
     &__greeting{
         font-size: 40px;
     }
     &__introduction{
-        font-size: 170px;
+        font-size: clamp(10.625rem, -4.279rem + 24.04vw, 13.75rem);
         text-transform: uppercase;
+        text-wrap: nowrap;
         &_vertical{
             position: relative;
             writing-mode: vertical-rl;
-            font-size: 34px;
+            font-size:  clamp(2.125rem, -0.558rem + 4.33vw, 2.688rem);
             color: $color-secondary;
             margin-bottom: -2px;
             cursor: pointer;
@@ -79,15 +101,52 @@
     }
     &__definition{
         margin-top: -20px;
-        font-size: 40px;
+        font-size: clamp(2.688rem, 0.601rem + 3.37vw, 3.125rem);
         text-transform: uppercase;
         color: $color-text--dark;
+        text-wrap: wrap;
     }
     &__buttons{
         margin-top: 20px;
         display: flex;
         align-items: center;
         gap: 20px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        &__introduction{
+            // 260 - 325; 
+            font-size: clamp(16.25rem, 2.259rem + 29.15vw, 20.313rem);
+            &_vertical{
+                // 51 - 64
+               font-size: clamp(3.188rem, 0.389rem + 5.83vw, 4rem); 
+            }
+        }
+        &__definition{
+          font-size: 50px;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 767px) {
+        &__introduction{
+            // 100 - 250; 
+            font-size: clamp(6.25rem, -0.461rem + 33.56vw, 15.625rem);
+            &_vertical{
+                // 20.5 - 50
+               font-size: clamp(1.281rem, -0.039rem + 6.6vw, 3.125rem); 
+            }
+        }
+        &__definition{
+          font-size: clamp(1.281rem, -0.039rem + 6.6vw, 3.125rem);
+        }
+    }
+    @media (max-width: 991px) {
+        margin-top: 0;
+    }
+    @media (max-width: 490px) {
+        &__buttons{
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
     }
 }
 .appeared-bg{
@@ -103,8 +162,9 @@
     background-color: $color-secondary;
 }
 .portrait{
-    flex: 0 0 600px;
-    height: 100%;
+    flex: 1 1 600px;
+    min-width: 420px;
+    max-width: 600px;
     position: relative;
     &__tooltip{
         position: absolute;
@@ -147,8 +207,19 @@
         opacity: 0;
     }
     .webgl{
+        width: 100% !important;
+        height: auto !important;
         position: relative;
         z-index: 1;
+        aspect-ratio: 1 / 1.25;
+    }
+    @media screen and (max-width: 991px) {
+        flex: 1 1 auto;
+        min-width: 550px;
+    }
+    @media (max-width: 767px) {
+        min-width: auto;
+        width: 100%;
     }
 }
 .spline{
@@ -157,7 +228,7 @@
     z-index: 0;
 }
 .section-about{
-    padding: 100px 100px 100px 100px;
+    padding: 100px 0;
     width: 100%;
     position: relative;
     &__wrapper{
@@ -171,6 +242,15 @@
         display: flex;
         align-items: center;
     }
+    @media screen and (max-width: 991px) {
+        &__wrapper{
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+    @media (max-width: 767px) {
+        padding: 0;
+    }
 }
 .full-information{
     flex: 1 1 auto;
@@ -183,24 +263,27 @@
     &__text:not(:first-child){
         margin-top: 10px;
     }
+    @media (min-width: 320px) and (max-width: 650px) {
+        &__text{
+            font-size: clamp(1.25rem, 0.644rem + 3.03vw, 1.875rem);
+        }
+    }
 }
 .date{
     display: flex;
     align-items: center;
     gap: 8px;
     &__nums{
-        font-size: 150px;
+        font-size: clamp(6.25rem, 3.22rem + 15.15vw, 9.375rem);
         font-family: $font-nums;
         display: flex;
+        gap: 5px;
     }
     &__num{
         display: inline-block;
-        min-width: 110px;
-    }
-    &__info{
     }
     &__month{
-        font-size: 30px;
+        font-size: clamp(1.25rem, 0.644rem + 3.03vw, 1.875rem);
         text-transform: uppercase;
         display: block;
         opacity: 1;
@@ -210,13 +293,15 @@
         text-transform: uppercase;
         display: block;
         opacity: 1;
+        font-size: clamp(0.813rem, 0.631rem + 0.91vw, 1rem);
     }
 }
 .section-portfolio{
-    padding: 100px 0 100px 50px;
     width: 100%;
     position: relative;
+    overflow: hidden;
     &__wrapper{
+        padding: 100px 0;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -232,12 +317,13 @@
         position: relative;
     }
     &__info{
-        flex: 1 1 auto;
+        flex: 1 1 100%;
         display: flex;
         flex-direction: column;
     }
     &__title{
         font-size: 50px;
+        text-wrap: nowrap;
         .split-text__letter{
             transform: translate(0, 50px);
         }
@@ -246,13 +332,16 @@
         margin-top: -5px;
         font-size: 27px;
         color: $color-text--darken;
+        text-wrap: nowrap;
         .split-text__letter{
             transform: translate(0, 50px);
         }
     }
     &__block{
-        flex: 0 0 auto;
-        height: 330px;
+        flex: 0 1 auto;
+        max-width: 750px;
+        height: auto;
+        max-height: 350px;
         position: relative;
     }
     &__image{
@@ -279,6 +368,9 @@
         }
     }
     &:nth-child(even) {
+        .portfolio-card__wrapper{
+            flex-direction: row-reverse;
+        }
         .portfolio-card__title, .portfolio-card__text{
             text-align: right;
         }
@@ -288,6 +380,20 @@
         .portfolio-card__button{
             left: 0;
             transform: translate(-50%, -50%) scale(.5);
+        }
+    }
+    @media (max-width: 650px) {
+        &__wrapper{
+            flex-direction: column-reverse !important;
+        }
+    }
+    @media (max-width: 767px) {
+        &__button{
+            width: clamp(6.25rem, 1.776rem + 22.37vw, 12.5rem);
+            height: clamp(6.25rem, 1.776rem + 22.37vw, 12.5rem);
+            .circle-link__link{
+                font-size: clamp(1rem, 0.553rem + 2.24vw, 1.625rem);
+            }
         }
     }
 }
@@ -300,7 +406,7 @@
     background-color: $color-primary;
     opacity: 0;
     z-index: -1;
-    padding: 15px 100px;
+    padding: 15px;
     &__wrapper{
         display: flex;
         flex-direction: column;
@@ -361,12 +467,11 @@
     }
     &__img{
         flex: 1 1 auto;
-        max-width: 700px;
-        height: 350px;
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0;
         }
     }
     &__footer{
@@ -404,6 +509,15 @@
             opacity: 0;
         }
     }
+    @media (max-width: 767px) {
+        &__body{
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__description{
+            max-width: 100%;
+        }
+    }
 }
 .popup-card{
     position: fixed;
@@ -415,9 +529,9 @@
     }
 }
 .section-skills{
-    padding: 100px 0 100px 50px;
     display: grid;
     grid-template-columns: 1fr;
+    max-width: calc(100vw - clamp(1.25rem, -7.692rem + 14.42vw, 3.125rem) * 2 - 30px);
     &__wrapper{
         overflow: hidden;
         display: flex;
@@ -432,12 +546,15 @@
         gap: 15px;
         position: relative;
     }
+    @media (max-width: 767px) {
+        max-width: calc(100vw - 30px);
+    }
 }
 .stack-button{
     position: fixed;
     z-index: 5;
-    right: 30px;
-    bottom: 30px;
+    right: 15px;
+    bottom: 15px;
     width: 120px;
     height: 120px;
     transform: translate(calc(100% + 30px), 0);
@@ -451,11 +568,14 @@
     right: 0;
     width: 600px;
     height: 100vh;
+    max-height: 100vh;
     background-color: $color-primary;
     pointer-events: none;
     transform: translate(0, 100%);
+    overflow-y: auto;
     &__container{
         padding: 15px;
+        width: 100%;
     }
     &__column-list{
         display: flex;
@@ -504,10 +624,14 @@
     &__item-title{
         text-transform: uppercase;
     }
+    @media (max-width: 991px) {
+        padding-left: 15px;
+        width: 100vw;
+    }
 }
 .skill-card{
-    flex: 1 1 33.33%;
-    min-width: 33.33%;
+    flex: 1 1 auto;
+    min-width: 40%;
     height: 100%;
     background-color: #202020;
     padding: 10px;
@@ -550,10 +674,10 @@
     }
     &__title-wrapper{
         position: relative;
+        font-size: clamp(4.313rem, 0.74rem + 5.76vw, 6.25rem);
     }
     &__title{
         margin-top: auto;
-        font-size: 78px;
         text-transform: uppercase;
         letter-spacing: 2px;
         -webkit-text-fill-color: transparent;
@@ -568,7 +692,6 @@
         top:0;
         width: 100%;
         height: 100%;
-        font-size: 78px;
         text-transform: uppercase;
         letter-spacing: 2px;
         color: transparent;
@@ -584,30 +707,48 @@
         top:0;
         width: 100%;
         height: 100%;
-        font-size: 78px;
         text-transform: uppercase;
         letter-spacing: 2px;
         color: transparent;
         -webkit-text-fill-color: white;
         -webkit-text-stroke-width: 1.3px;
-        width: 0;
+        width: 0%;
         overflow: hidden;
+    }
+    @media (max-width: 991px) {
+        min-width: 50%;
+    }
+    @media (max-width: 768px) {
+        min-width: 100%;
+        &__title-wrapper{
+            font-size: clamp(3.125rem, -0.893rem + 20.09vw, 8.75rem);
+        }
     }
 }
 .section-contact{
     width: 100%;
-    padding: 0 0 0 50px;
     &__wrapper{
+        padding: 100px 0;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 75px;
     }
     &__feedback{
+        width: 100%;
         flex: 1 1 50%;
     }
     &__globe{
+        width: 90%;
         flex: 1 1 50%;
+    }
+    @media screen and (max-width: 992px) {
+        height: auto;
+        &__wrapper{
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 25px;
+        }
     }
 }
 .form{
@@ -634,12 +775,18 @@
     &__button-group{
         margin-top: 30px;
     }
+    @media screen and (max-width: 410px) {
+        &__input-row{
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
 }
 .input-group{
     border: 2px solid rgb(68, 68, 68);
     background-color: transparent;
     border-radius: 25px;
-    padding: 17px 10px;
+    padding: clamp(0.5rem, -0.045rem + 2.73vw, 1.063rem) clamp(0.25rem, -0.114rem + 1.82vw, 0.625rem);
     cursor: pointer;
     transition: border .5s ease;
     &__wrapper{
@@ -757,15 +904,9 @@
     }
 }
 .globe{
-    width: 100%;
-    height: 700px;
+    min-width: 450px;
     position: relative;
     &__circle{
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 600px;
-        height: 600px;
         overflow: hidden;
         border-radius: 50%;
         position: relative;
@@ -775,8 +916,12 @@
             cursor: grabbing;
         }
     }
-    &__title-block{
-
+    canvas{
+        width: 100% !important;
+        height: auto !important;
+        position: relative;
+        z-index: 1;
+        aspect-ratio: 1 / 1;
     }
     &__title{
         position: absolute;
@@ -798,6 +943,9 @@
             -webkit-text-fill-color: white;
             color: white;
         }
+    }
+    @media screen and (max-width: 992px) {
+        min-width: auto;
     }
 }
 .popup-submit-result{
