@@ -6,8 +6,11 @@ html{
     background-color: $color-primary;
     color: $color-text;
     font-weight: 500;
-    overflow-x: hidden;
     max-width: 100vw;
+    &__container{
+        position: relative;
+        overflow-x: hidden;
+    }
     &_lock{
         overflow: hidden;
     }
