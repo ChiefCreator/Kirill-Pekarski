@@ -27,7 +27,7 @@ function init3DModel() {
     renderer.setClearColor(0xffffff, 0);
     
     const loader = new GLTFLoader();
-    loader.load( './../3d/portrait2.glb', 
+    loader.load( '././3d/portrait2.glb', 
         (gltf) => {
             gltf.scene.scale.set(1.35, 1.35, 1.35); 
             scene.add(gltf.scene);

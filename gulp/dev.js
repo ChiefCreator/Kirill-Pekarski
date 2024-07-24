@@ -32,7 +32,7 @@ gulp.task("html:dev", function() {
             prefix: "@@",
             basepath: "@file",
         }))
-        .pipe(gulp.dest("./build/"))
+        .pipe(gulp.dest("./docs/"))
 });
 
 gulp.task("scss:dev", function() {
@@ -48,47 +48,47 @@ gulp.task("scss:dev", function() {
         // .pipe(sassGlob())
         .pipe(sass())
         .pipe(sourceMaps.write())
-        .pipe(gulp.dest("./build/css/"))
+        .pipe(gulp.dest("./docs/css/"))
 });
 
 gulp.task("images:dev", function() {
     return gulp.src("./src/img/*")
-        .pipe(gulp.dest("./build/img/"))
+        .pipe(gulp.dest("./docs/img/"))
 });
 
 gulp.task("video:dev", function() {
     return gulp.src("./src/video/*")
-        .pipe(gulp.dest("./build/video/"))
+        .pipe(gulp.dest("./docs/video/"))
 });
 
 gulp.task("icons:dev", function() {
     return gulp.src("./src/icon/*")
-        .pipe(gulp.dest("./build/icon/"))
+        .pipe(gulp.dest("./docs/icon/"))
 });
 
 gulp.task("fonts:dev", function() {
     return gulp.src("./src/fonts/*")
-        .pipe(gulp.dest("./build/fonts/"))
+        .pipe(gulp.dest("./docs/fonts/"))
 });
 
 gulp.task("3d:dev", function() {
     return gulp.src("./src/3d/*")
-        .pipe(gulp.dest("./build/3d/"))
+        .pipe(gulp.dest("./docs/3d/"))
 });
 
 gulp.task("js:dev", function() {
     return gulp.src("./js/*.js")
         .pipe(webpack(require("./../webpack.config.js")))
-        .pipe(gulp.dest("./build/js"))
+        .pipe(gulp.dest("./docs/js"))
 });
 gulp.task('react:dev', function () {
     return gulp.src('./js/*.js')
         .pipe(react())
-        .pipe(gulp.dest('./build/js'));
+        .pipe(gulp.dest('./docs/js'));
 });
 
 gulp.task("server:dev", function() {
-    return gulp.src("./build/")
+    return gulp.src("./docs/")
         .pipe(server({
             livereload:true,
             open:true,
@@ -96,8 +96,8 @@ gulp.task("server:dev", function() {
 });
 
 gulp.task("clean:dev", function(done) {
-    if (fs.existsSync("./build/")) {
-        return gulp.src("./build/", {read:false})
+    if (fs.existsSync("./docs/")) {
+        return gulp.src("./docs/", {read:false})
             .pipe(clean())
     }
     done()
