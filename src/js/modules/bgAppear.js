@@ -9,7 +9,8 @@ function appearBg() {
     const circleEl = document.querySelector(".route-line__circle");
 
     let master = gsap.timeline({paused: true});
-    master.set(bgElement, {opacity: 1})
+    master.set(bgParentElement, {opacity: 0})
+          .set(bgElement, {opacity: 1})
           .to(bgElement, {transform: "scale(70)", duration: .5, ease: "linear"})
           .to(horizontalLineEl, {borderBottom: "1px solid #dfdfdf", duration: .25, ease: "linear"}, "<+=50%")
           .to(verticalLineEBgl, {backgroundColor: "#dfdfdf", duration: .25, ease: "linear"}, "<")
@@ -29,8 +30,6 @@ function appearBg() {
             top: event.y,
             left: event.x,
         }
-
-        console.log(cursorCoordinates.top)
 
         bgEl.style.left = `${cursorCoordinates.left}px`;
         bgEl.style.top = `${cursorCoordinates.top}px`;

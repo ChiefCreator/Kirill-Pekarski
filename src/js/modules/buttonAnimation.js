@@ -8,7 +8,7 @@ function buttonAnimation() {
 
             let newElement = document.createElement("div");
             newElement.classList.add("button__pulse-element");
-            newElement.style.width = newElement.style.height = Math.max(button.offsetHeight, button.offsetWidth) / 2 + "px";
+            newElement.style.width = newElement.style.height = Math.max(button.offsetHeight, button.offsetWidth) * 2 + "px";
             button.append(newElement);
 
             let x = event.clientX;

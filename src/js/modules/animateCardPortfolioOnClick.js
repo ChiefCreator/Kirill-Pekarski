@@ -135,7 +135,6 @@ function animateCardPortfolioOnClick() {
                .set(popupCard, {left: cardImgConfig.left, top: cardImgConfig.top, width: cardImgConfig.width, height: cardImgConfig.height, zIndex: 4, opacity: 1})
                .to(popupCard, {left: popupImgConfig.left, top: popupImgConfig.top, height: popupImgConfig.height, width: popupImgConfig.width,  duration: 1, ease: "power4.out"})
 
-               console.log(popupImgConfig)
             tl2.set(popup, {zIndex: 3})
                .to(popup, {opacity: 1, duration: 1, ease: "power4.out"}, 0)
                .to(popuLine, {opacity: 1, width: "100%", duration: 2, ease: "power4.out"}, 0.5)

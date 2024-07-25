@@ -6,24 +6,24 @@
                 <h5 class="logo__title logo__title_bg">Kirill Pekarski</h5>
             </div>
             <div class="header__links">
-                @@include("./link.html", { title: "Обо мне"})
-                @@include("./link.html", { title: "Портфолио"})
-                @@include("./link.html", { title: "Навыки"})
-                @@include("./link.html", { title: "Связаться"})
+                @@include("./link.html", { title: "Обо мне", href: "#about"})
+                @@include("./link.html", { title: "Портфолио", href: "#portfolio"})
+                @@include("./link.html", { title: "Навыки", href: "#skills"})
+                @@include("./link.html", { title: "Связаться", href: "#contact"})
             </div>
             <a type="button" class="header__menu-button">
                 <span></span>
             </a>
         </div>
     </div>
-    <div class="mobile-menu">
-        <div class="mobile-menu__container">
-            <div class="mobile-menu__links">
-                @@include("./link.html", { title: "Обо мне"})
-                @@include("./link.html", { title: "Портфолио"})
-                @@include("./link.html", { title: "Навыки"})
-                @@include("./link.html", { title: "Связаться"})
-            </div>
+</header>
+<div class="mobile-menu">
+    <div class="mobile-menu__container">
+        <div class="mobile-menu__links">
+            @@include("./link.html", { title: "Обо мне", href: "#about"})
+                @@include("./link.html", { title: "Портфолио", href: "#portfolio"})
+                @@include("./link.html", { title: "Навыки", href: "#skills"})
+                @@include("./link.html", { title: "Связаться", href: "#contact"})
         </div>
     </div>
-</header>
+</div>

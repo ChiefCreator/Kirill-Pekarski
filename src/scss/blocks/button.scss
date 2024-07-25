@@ -35,7 +35,7 @@
     &__pulse-element{
         z-index: 1;
         position: absolute;
-        background-color: $color-primary;
+        background-color: transparent;
         animation: pulse .5s ease-in-out;
         border-radius: 50%;
     }

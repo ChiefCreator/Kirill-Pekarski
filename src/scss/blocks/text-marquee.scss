@@ -1,0 +1,52 @@
+.text-marquee{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    &__title{
+        opacity: 0;
+        pointer-events: none;
+    }
+    &__wrapper{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        width: 200%;
+        height: 100%;
+    }
+    &__name{
+        display: block;
+        width: 100%;
+        text-wrap: nowrap;
+        text-transform: uppercase;
+        &_first{
+            padding: 0 10px;
+            animation: marquee1 12s linear infinite;
+            animation-delay: -12s;
+        }
+        &_second{
+            padding: 0 10px;
+            animation: marquee2 12s linear infinite;
+            animation-delay: -6s;
+        }
+    }
+    @keyframes marquee1 {
+        0% {
+            transform: translateX(100%);
+        }
+        
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    @keyframes marquee2 {
+        0% {
+            transform: translateX(0%);
+        }
+        
+        100% {
+            transform: translateX(-200%);
+        }
+    }
+}

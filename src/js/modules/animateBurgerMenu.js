@@ -25,6 +25,16 @@ function animateBurgerMenu() {
             .set($linkTitleTop, {opacity: 1})
             .set($linkTitleBottom, {opacity: 1})
 
+        link.addEventListener("click",function(e) {
+            e.preventDefault();
+            
+            timelineMobileMenu.reverse()
+            $button.classList.toggle("header__menu-button_active");
+
+            gsap.to(window, {duration: 5, ease: "elastic.out", delay: 3.5, scrollTo:{y: link.getAttribute("data-href"), autoKill: true}})
+            toggleScroll(false, 3500);
+        })
+
     })
 
     $button.onclick = function(e) {
