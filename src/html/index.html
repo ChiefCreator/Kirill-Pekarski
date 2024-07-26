@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Kirill Pekarski</title>
 </head>
-<body class="body">
+<body class="body body_lock">
+    @@include("./blocks/preloader.html")
     <div class="overblock"></div>
     <div class="popup-card"><img></div>
     <div class="popup-portfolio-card">
@@ -36,7 +37,9 @@
         </div>
     </div>
     <div class="popup-submit-result"><p class="popup-submit-result__text">Форма отправлено успешно</p></div>
-    <div class="appeared-bg"></div>
+    <div class="appeared-bg-wrapper">
+        <div class="appeared-bg"></div>
+    </div>
     <div class="stack">
         <div class="stack__container">
             <header class="stack__header">
@@ -297,7 +300,7 @@
                     </section>
                     <section class="section-portfolio" id="portfolio">
                         <div class="section-portfolio__wrapper">
-                            <div class="portfolio-card portfolio-card_odd portfolio-card_Your-Budget" id="your_budget">
+                            <div class="portfolio-card portfolio-card_odd portfolio-card_Your-Budget" id="your_budget" data-href="https://chiefcreator.github.io/Your Budget/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         @@include("./blocks/circle-link.html", {class: "portfolio-card__button", title: "Посетить"})
@@ -311,7 +314,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-card portfolio-card_even portfolio-card_Nikita-Efremov" id="nikita_efremov">
+                            <div class="portfolio-card portfolio-card_even portfolio-card_Nikita-Efremov" id="nikita_efremov" data-href="https://chiefcreator.github.io/photographer/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         @@include("./blocks/circle-link.html", {class: "portfolio-card__button", title: "Посетить"})
@@ -325,7 +328,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-card portfolio-card_odd portfolio-card_Panto" id="panto">
+                            <div class="portfolio-card portfolio-card_odd portfolio-card_Panto" id="panto" data-href="https://chiefcreator.github.io/Panto/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         @@include("./blocks/circle-link.html", {class: "portfolio-card__button", title: "Посетить"})
@@ -339,7 +342,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-card portfolio-card_even portfolio-card_Tennis" id="tennis">
+                            <div class="portfolio-card portfolio-card_even portfolio-card_Tennis" id="tennis" data-href="https://chiefcreator.github.io/Tennis/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         @@include("./blocks/circle-link.html", {class: "portfolio-card__button", title: "Посетить"})
@@ -353,7 +356,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-card portfolio-card_odd portfolio-card_Kolyan-Kovsh" id="kolyan_kovsh">
+                            <div class="portfolio-card portfolio-card_odd portfolio-card_Kolyan-Kovsh" id="kolyan_kovsh" data-href="https://chiefcreator.github.io/KolyanKovsh/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         @@include("./blocks/circle-link.html", {class: "portfolio-card__button", title: "Посетить"})

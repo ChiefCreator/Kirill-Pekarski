@@ -16,8 +16,9 @@ import formSend from "./modules/formSend";
 import stackAppear from "./modules/stackAppear";
 import animateBurgerMenu from "./modules/animateBurgerMenu";
 import transitionToSections from "./modules/transitionToSections";
+import preloadAnimation from "./modules/preloadAnimation";
 
-transitionToSections();
+preloadAnimation();
 animateBurgerMenu();
 stackAppear();
 formSend();
@@ -34,4 +35,5 @@ animateOnScrollSectionAbout();
 animateSkillCardOnHover();
 animateOnScrollPortfolioSection();
 animateCardPortfolioOnClick();
+transitionToSections();
 init3DModel();

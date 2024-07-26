@@ -15,7 +15,7 @@ function animateCardPortfolioOnClick() {
     let closeLine2 = close.querySelector(".popup-portfolio-card__close-line_2");
     let header = document.querySelector(".header");
 
-    const setContent = (card, popupCard, popupTitle, popupDefinition, popupText) => {
+    const setContent = (card, popupCard, popupTitle, popupDefinition, popupText, popupLink) => {
         
         return new Promise((resolve, reject) => {
             let data = [
@@ -63,6 +63,8 @@ function animateCardPortfolioOnClick() {
                 popupText.textContent = data.find(item => item.id === card.id).text;
             }
 
+            popupLink.href = card.getAttribute("data-href");
+
             let imgCard = card.querySelector("img");
             let imgPortfolioCard = popupCard.querySelector("img");
             imgPortfolioCard.src = imgCard.src;
@@ -103,7 +105,7 @@ function animateCardPortfolioOnClick() {
     cards.forEach(card => {
         card.addEventListener("click", async function() {
 
-            await setContent(card, popupCard, popupTitle, popupDefinition, popupText);
+            await setContent(card, popupCard, popupTitle, popupDefinition, popupText, popupLink);
 
             splitText(popupTitle);
             splitText(popupDefinition);

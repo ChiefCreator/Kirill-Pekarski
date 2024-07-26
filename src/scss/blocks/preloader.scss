@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+.preloader{
+    position: fixed;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    left: 100%;
+    top: 0;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    pointer-events: none;
+    &_active{
+        left: 0;
+    }
+    &__loader{
+        position: relative;
+        margin: auto;
+        width: 100%;
+        max-width: 700px;
+        color: white;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: clamp(3.125rem, 1.913rem + 6.06vw, 4.375rem);
+        background: $color-primary;
+        box-shadow: inset 0 5px 20px rgb(27, 27, 27);
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    span{
+        float: left;
+        height: clamp(6.25rem, 3.22rem + 15.15vw, 9.375rem);
+        line-height: 120px;
+        width: 14.25%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__loader-covers{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        span {
+            background: $color-secondary;
+            animation: up 2s infinite;
+            &:nth-child(2) { animation-delay: .142857s; }
+            &:nth-child(3) { animation-delay: .285714s; }
+            &:nth-child(4) { animation-delay: .428571s; }
+            &:nth-child(5) { animation-delay: .571428s; }
+            &:nth-child(6) { animation-delay: .714285s; }
+            &:nth-child(7) { animation-delay: .857142s; }
+        }
+    }
+}
+
+@keyframes up {
+  0%   { margin-bottom: 0; }
+  16%  { margin-bottom: 100%; height: 20px; }
+  50% { margin-bottom: 0; }
+  100% { margin-bottom: 0; }
+}
+
+

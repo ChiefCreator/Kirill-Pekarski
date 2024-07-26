@@ -148,8 +148,14 @@
         }
     }
 }
+.appeared-bg-wrapper{
+    position: absolute;
+    width: 100vw;
+    height: 300vh;
+    overflow: hidden;
+}
 .appeared-bg{
-    position: fixed;
+    position: absolute;
     z-index: -1;
     left: 50%;
     top: 50%;
@@ -472,6 +478,7 @@
     }
     &__img{
         flex: 1 1 auto;
+        max-width: 1000px;
         img{
             width: 100%;
             height: 100%;

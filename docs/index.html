@@ -6,7 +6,27 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Kirill Pekarski</title>
 </head>
-<body class="body">
+<body class="body body_lock">
+    <div class="preloader preloader_active">
+    <div class="preloader__loader">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+        <div class="preloader__loader-covers">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
     <div class="overblock"></div>
     <div class="popup-card"><img></div>
     <div class="popup-portfolio-card">
@@ -36,7 +56,9 @@
         </div>
     </div>
     <div class="popup-submit-result"><p class="popup-submit-result__text">Форма отправлено успешно</p></div>
-    <div class="appeared-bg"></div>
+    <div class="appeared-bg-wrapper">
+        <div class="appeared-bg"></div>
+    </div>
     <div class="stack">
         <div class="stack__container">
             <header class="stack__header">
@@ -231,25 +253,25 @@
                 <h5 class="logo__title logo__title_bg">Kirill Pekarski</h5>
             </div>
             <div class="header__links">
-                <a class="link" data-href="#about">
+                <a class="link" data-href="#about" href="@@href">
     <span class="link__title">Обо мне</span>
     <div class="link__top"><span>Обо мне</span></div>
     <div class="link__bottom"><span>Обо мне</span></div>
     <span class="link__slice"></span>
 </a>
-                <a class="link" data-href="#portfolio">
+                <a class="link" data-href="#portfolio" href="@@href">
     <span class="link__title">Портфолио</span>
     <div class="link__top"><span>Портфолио</span></div>
     <div class="link__bottom"><span>Портфолио</span></div>
     <span class="link__slice"></span>
 </a>
-                <a class="link" data-href="#skills">
+                <a class="link" data-href="#skills" href="@@href">
     <span class="link__title">Навыки</span>
     <div class="link__top"><span>Навыки</span></div>
     <div class="link__bottom"><span>Навыки</span></div>
     <span class="link__slice"></span>
 </a>
-                <a class="link" data-href="#contact">
+                <a class="link" data-href="#contact" href="@@href">
     <span class="link__title">Связаться</span>
     <div class="link__top"><span>Связаться</span></div>
     <div class="link__bottom"><span>Связаться</span></div>
@@ -265,25 +287,25 @@
 <div class="mobile-menu">
     <div class="mobile-menu__container">
         <div class="mobile-menu__links">
-            <a class="link" data-href="#about">
+            <a class="link" data-href="#about" href="@@href">
     <span class="link__title">Обо мне</span>
     <div class="link__top"><span>Обо мне</span></div>
     <div class="link__bottom"><span>Обо мне</span></div>
     <span class="link__slice"></span>
 </a>
-                <a class="link" data-href="#portfolio">
+                <a class="link" data-href="#portfolio" href="@@href">
     <span class="link__title">Портфолио</span>
     <div class="link__top"><span>Портфолио</span></div>
     <div class="link__bottom"><span>Портфолио</span></div>
     <span class="link__slice"></span>
 </a>
-                <a class="link" data-href="#skills">
+                <a class="link" data-href="#skills" href="@@href">
     <span class="link__title">Навыки</span>
     <div class="link__top"><span>Навыки</span></div>
     <div class="link__bottom"><span>Навыки</span></div>
     <span class="link__slice"></span>
 </a>
-                <a class="link" data-href="#contact">
+                <a class="link" data-href="#contact" href="@@href">
     <span class="link__title">Связаться</span>
     <div class="link__top"><span>Связаться</span></div>
     <div class="link__bottom"><span>Связаться</span></div>
@@ -393,7 +415,7 @@
                     </section>
                     <section class="section-portfolio" id="portfolio">
                         <div class="section-portfolio__wrapper">
-                            <div class="portfolio-card portfolio-card_odd portfolio-card_Your-Budget" id="your_budget">
+                            <div class="portfolio-card portfolio-card_odd portfolio-card_Your-Budget" id="your_budget" data-href="https://chiefcreator.github.io/Your Budget/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         <button class="circle-link portfolio-card__button">
@@ -419,7 +441,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-card portfolio-card_even portfolio-card_Nikita-Efremov" id="nikita_efremov">
+                            <div class="portfolio-card portfolio-card_even portfolio-card_Nikita-Efremov" id="nikita_efremov" data-href="https://chiefcreator.github.io/photographer/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         <button class="circle-link portfolio-card__button">
@@ -445,7 +467,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-card portfolio-card_odd portfolio-card_Panto" id="panto">
+                            <div class="portfolio-card portfolio-card_odd portfolio-card_Panto" id="panto" data-href="https://chiefcreator.github.io/Panto/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         <button class="circle-link portfolio-card__button">
@@ -471,7 +493,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-card portfolio-card_even portfolio-card_Tennis" id="tennis">
+                            <div class="portfolio-card portfolio-card_even portfolio-card_Tennis" id="tennis" data-href="https://chiefcreator.github.io/Tennis/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         <button class="circle-link portfolio-card__button">
@@ -497,7 +519,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-card portfolio-card_odd portfolio-card_Kolyan-Kovsh" id="kolyan_kovsh">
+                            <div class="portfolio-card portfolio-card_odd portfolio-card_Kolyan-Kovsh" id="kolyan_kovsh" data-href="https://chiefcreator.github.io/KolyanKovsh/">
                                 <div class="portfolio-card__wrapper">
                                     <div class="portfolio-card__block">
                                         <button class="circle-link portfolio-card__button">
@@ -789,33 +811,27 @@
     <div class="container footer__container">
         <div class="footer__content">
             <div class="footer__links">
-                <a class="link" data-href="@@href">
+                <a class="link" data-href="@@dataHref" href="https://www.instagram.com/pekar00wow/?next=%2F">
     <span class="link__title">Instagram</span>
     <div class="link__top"><span>Instagram</span></div>
     <div class="link__bottom"><span>Instagram</span></div>
     <span class="link__slice"></span>
 </a>
-                <a class="link" data-href="@@href">
+                <a class="link" data-href="@@dataHref" href="https://t.me/chiefpekar">
     <span class="link__title">Telegram</span>
     <div class="link__top"><span>Telegram</span></div>
     <div class="link__bottom"><span>Telegram</span></div>
     <span class="link__slice"></span>
 </a>
-                <a class="link" data-href="@@href">
-    <span class="link__title">LinkIn</span>
-    <div class="link__top"><span>LinkIn</span></div>
-    <div class="link__bottom"><span>LinkIn</span></div>
-    <span class="link__slice"></span>
-</a>
-                <a class="link" data-href="@@href">
-    <span class="link__title">Slack</span>
-    <div class="link__top"><span>Slack</span></div>
-    <div class="link__bottom"><span>Slack</span></div>
+                <a class="link" data-href="@@dataHref" href="mailto:kipe122006@gmail.com">
+    <span class="link__title">Gmail</span>
+    <div class="link__top"><span>Gmail</span></div>
+    <div class="link__bottom"><span>Gmail</span></div>
     <span class="link__slice"></span>
 </a>
             </div>
             <div class="footer__versions">
-                <a class="link" data-href="@@href">
+                <a class="link" data-href="@@dataHref" href="@@href">
     <span class="link__title">V1</span>
     <div class="link__top"><span>V1</span></div>
     <div class="link__bottom"><span>V1</span></div>
