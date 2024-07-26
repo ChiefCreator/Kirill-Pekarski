@@ -2,6 +2,8 @@ import gsap from "gsap";
 import toggleScroll from "./toggleScroll";
 
 function preloadAnimation() {
+    toggleScroll(true);
+
     const $preloader = document.querySelector(".preloader");
     const bgElement = document.querySelector(".appeared-bg");
     const bgParentElement = document.querySelector(".brief-information__introduction_vertical");
